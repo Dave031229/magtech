@@ -1,0 +1,15 @@
+# Exported from Render on 2026-03-23T13:07:49Z
+version: "1"
+services:
+- type: web
+  name: magtech
+  runtime: python
+  repo: https://github.com/Dave031229/magtech
+  plan: free
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: gunicorn main:app
+  domains:
+  - www.magtechelectronicsph.com
+  - magtechelectronicsph.com
+  autoDeployTrigger: commit
