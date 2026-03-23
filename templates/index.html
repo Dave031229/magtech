@@ -7,8 +7,8 @@
     <title>MAGTECH Electronics Inc. | Advanced Electronic Component Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-       <link rel="icon" type="image/png" href="{{ url_for('static', filename='Source/logo.png') }}">
-          <!--link rel="icon" type="image/png" href="source/logo.png"-->
+       <link rel="icon" type="image/png" href="{{ url_for('static', filename='/static/Source/logo.png') }}">
+          <!--link rel="icon" type="image/png" href="/static/Source/logo.png"-->
     <style>
         /* Clean & Readable Variables */
         :root {
@@ -269,7 +269,7 @@
         }
 
         /* Floating Electronics Particles */
-        .particles-container {
+        .particles-container {                                                                                                       
             position: absolute;
             top: 0;
             left: 0;
@@ -1602,7 +1602,7 @@
             background: linear-gradient(135deg, 
                 rgba(0, 0, 0, 0.623) 0%, 
                 rgba(0, 0, 0, 0.918) 50%, 
-                rgba(0, 0, 0, 0.401) 100%), url("Source/company.png") center/cover no-repeat;
+                rgba(0, 0, 0, 0.401) 100%), url("/static/Source/company.png") center/cover no-repeat;
             filter: brightness(0.8);
             z-index: 0;
             color:#fff;
@@ -2725,7 +2725,7 @@
             <div class="nav-container">
                 <a href="#" class="brand">
                     <div class="brand-icon">
-                        <img src="Source/magnet.png" width="100%" height="100%">
+                        <img src="/static/Source/magnet.png" width="100%" height="100%">
                     </div>
                    
                 </a>
@@ -3000,7 +3000,7 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
 
                             <div id="dot-container" class="dot-container"></div>
                         </div>
-                        <!--div class="slide-image " style="background-image: url('Source/Plating.png');">
+                        <!--div class="slide-image " style="background-image: url('/static/Source/Plating.png');">
                             <div class="slide-image-overlay">
                                 <h4>Inductance Solutions</h4>
                                 <p>Advanced components for various applications</p>
@@ -3035,7 +3035,7 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
 
                                 <div id="PS-container" class="dot-container"></div>
                         </div>
-                        <!--div class="slide-image" style="background-image: url('Source/Plate.png');">
+                        <!--div class="slide-image" style="background-image: url('/static/Source/Plate.png');">
                             <div class="slide-image-overlay">
                                 <h4>Plating Services</h4>
                                 <p>Precision surface finishing solutions</p>
@@ -3063,7 +3063,7 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                     
                     <!-- Slide 3: Testing -->
                     <div class="slideshow-slide" id="slide3">
-                        <div class="slide-image" style="background-image: url('Source/AOI.png'); background-size: contain; background-repeat: no-repeat; background-position: center;">
+                        <div class="slide-image" style="background-image: url('/static/Source/AOI.png'); background-size: contain; background-repeat: no-repeat; background-position: center;">
                             <div class="slide-image-overlay">
                                 <h4>Testing Services</h4>
                                 <p>Comprehensive quality assurance</p>
@@ -3089,7 +3089,7 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                     
                     <!-- Slide 4: PCBA -->
                     <div class="slideshow-slide" id="slide4"> 
-                        <div class="slide-image" style="background-image: url('Source/smt.png'); background-size: contain; background-repeat: no-repeat; background-position: center;">
+                        <div class="slide-image" style="background-image: url('/static/Source/smt.png'); background-size: contain; background-repeat: no-repeat; background-position: center;">
                    
                             <div class="slide-image-overlay">
                                 <h4>PCB Assembly</h4>
@@ -3116,7 +3116,7 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                     
                     <!-- Slide 5: Automation -->
                     <div class="slideshow-slide" id="slide5">
-                        <!--div class="slide-image" style="background-image: url('Source/automation.png');">
+                        <!--div class="slide-image" style="background-image: url('/static/Source/automation.png');">
                             <div class="slide-image-overlay">
                                 <h4>Automation & Digitalization</h4>
                                 <p>Smart manufacturing solutions</p>
@@ -3197,7 +3197,7 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                     <!-- Product Slide 1: Magnetic Components -->
                     <div class="product-slideshow-slide active" id="productSlide1">
                         <div class="product-slide-image">
-                            <img src="Source/p1.jpg" alt="Magnetic Components">
+                            <img src="/static/Source/p1.jpg" alt="Magnetic Components">
                             <div class="product-slide-image-overlay">
                                 <h4>Magnetic Components</h4>
                                 <p>Advanced magnetic solutions for diverse applications</p>
@@ -3225,7 +3225,7 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                     <!-- Product Slide 2: Electroplated Components -->
                     <div class="product-slideshow-slide" id="productSlide2">
                         <div class="product-slide-image">
-                            <img src="Source/Plate.png" alt="Electroplated Components">
+                            <img src="/static/Source/Plate.png" alt="Electroplated Components">
                             <div class="product-slide-image-overlay">
                                 <h4>Electroplated Components</h4>
                                 <p>Precision surface finishing solutions</p>
@@ -3253,7 +3253,7 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                     <!-- Product Slide 3: PCB Assemblies -->
                     <div class="product-slideshow-slide" id="productSlide3">
                         <div class="product-slide-image">
-                            <img src="Source/pcb_board.png" alt="PCB Assemblies">
+                            <img src="/static/Source/pcb_board.png" alt="PCB Assemblies">
                             <div class="product-slide-image-overlay">
                                 <h4>PCB Assemblies</h4>
                                 <p>Complete board solutions</p>
@@ -3281,7 +3281,7 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                     <!-- Product Slide 4: Tested Components -->
                     <div class="product-slideshow-slide" id="productSlide4">
                         <div class="product-slide-image">
-                            <img src="Source/AOI.png" alt="Tested Components">
+                            <img src="/static/Source/AOI.png" alt="Tested Components">
                             <div class="product-slide-image-overlay">
                                 <h4>Tested Components</h4>
                                 <p>Quality assured products</p>
@@ -3340,7 +3340,7 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                 <div class="production-card">
                     <div class="production-image">
                         <!--slide -->
-                        <img src="Source/plated1.jpg" alt="Plating Automated Lines">
+                        <img src="/static/Source/plated1.jpg" alt="Plating Automated Lines">
                         
                     </div>
                     <div class="production-content">
@@ -3357,7 +3357,7 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                 
                 <div class="production-card">
                     <div class="production-image">
-                        <img src="Source/smt.png" alt="Manufacture Electronics / PCB">
+                        <img src="/static/Source/smt.png" alt="Manufacture Electronics / PCB">
                     </div>
                     <div class="production-content">
                         <h3>Manufacture Electronics / PCB</h3>
@@ -3373,7 +3373,7 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                 
                 <div class="production-card">
                     <div class="production-image">
-                        <img src="Source/magnetElect.png" alt="Magnetics Electronics">
+                        <img src="/static/Source/magnetElect.png" alt="Magnetics Electronics">
                     </div>
                     <div class="production-content">
                         <h3>Magnetics Electronics</h3>
@@ -3390,7 +3390,7 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                 
                 <div class="production-card">
                     <div class="production-image">
-                        <img src="Source/automation.png" alt="Automation Inspection / Test / MSL">
+                        <img src="/static/Source/automation.png" alt="Automation Inspection / Test / MSL">
                     </div>
                     <div class="production-content">
                         <h3>Automation Inspection / Test / MSL</h3>
@@ -3421,49 +3421,49 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
             <div class="customer-logos">
                 <!-- Replace these with actual customer logos -->
                 <div class="customer-logo">
-                    <img src="Source/nxp.png" alt="Data Center Technology Partner">
+                    <img src="/static/Source/nxp.png" alt="Data Center Technology Partner">
                 </div>
                 <div class="customer-logo">
-                    <img src="Source/littlefuse.png" alt="Automotive Solutions Partner">
+                    <img src="/static/Source/littlefuse.png" alt="Automotive Solutions Partner">
                 </div>
                 <div class="customer-logo">
-                    <img src="Source/analogDegital.png" alt="Aerospace Systems Partner">
+                    <img src="/static/Source/analogDegital.png" alt="Aerospace Systems Partner">
                 </div>
                 <div class="customer-logo">
-                    <img src="Source/tdk.png" alt="Telecommunications Partner">
+                    <img src="/static/Source/tdk.png" alt="Telecommunications Partner">
                 </div>
                 <div class="customer-logo">
-                    <img src="Source/samsung.png" alt="Industrial Automation Partner">
+                    <img src="/static/Source/samsung.png" alt="Industrial Automation Partner">
                 </div>
                 <div class="customer-logo">
-                    <img src="Source/eaton.png" alt="Medical Devices Partner">
+                    <img src="/static/Source/eaton.png" alt="Medical Devices Partner">
                 </div>
                 <div class="customer-logo">
-                    <img src="Source/murata.png" alt="Consumer Electronics Partner">
+                    <img src="/static/Source/murata.png" alt="Consumer Electronics Partner">
                 </div>
                 <div class="customer-logo">
-                    <img src="Source/tecon.png" alt="Power Systems Partner">
+                    <img src="/static/Source/tecon.png" alt="Power Systems Partner">
                 </div>
                 <div class="customer-logo">
-                    <img src="Source/tesla.png" alt="Power Systems Partner">
+                    <img src="/static/Source/tesla.png" alt="Power Systems Partner">
                 </div>
                 <div class="customer-logo">
-                    <img src="Source/starlink.png" alt="Power Systems Partner">
+                    <img src="/static/Source/starlink.png" alt="Power Systems Partner">
                 </div>
                 <div class="customer-logo">
-                    <img src="Source/aptiv.png" alt="Power Systems Partner">
+                    <img src="/static/Source/aptiv.png" alt="Power Systems Partner">
                 </div>
                 <div class="customer-logo">
-                    <img src="Source/nexteer.png" alt="Power Systems Partner">
+                    <img src="/static/Source/nexteer.png" alt="Power Systems Partner">
                 </div>
                 <div class="customer-logo">
-                    <img src="Source/collins.png" alt="Power Systems Partner">
+                    <img src="/static/Source/collins.png" alt="Power Systems Partner">
                 </div>
                 <div class="customer-logo">
-                    <img src="Source/advanceEn.jpg" alt="Power Systems Partner">
+                    <img src="/static/Source/advanceEn.jpg" alt="Power Systems Partner">
                 </div>
                 <div class="customer-logo">
-                    <img src="Source/Schneider.png" alt="Power Systems Partner">
+                    <img src="/static/Source/Schneider.png" alt="Power Systems Partner">
                 </div>
             </div>
         </div>
@@ -3639,7 +3639,7 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                 <div class="footer-brand">
                     <a href="#" class="brand">
                         <div class="brand-icon">
-                           <img src="Source/company.png">
+                           <img src="/static/Source/company.png">
                         </div>
                         <div>
                         </div>
@@ -4371,9 +4371,9 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
             });
 
             const slideData = [
-                { src: 'Source/inductor.png', label: '' },
-                { src: 'Source/p2.JPG', label: '' },
-                { src: 'Source/p3.JPG', label: '' }
+                { src: '/static/Source/inductor.png', label: '' },
+                { src: '/static/Source/p2.JPG', label: '' },
+                { src: '/static/Source/p3.JPG', label: '' }
             ];
 
             let currentIndex = 0;
@@ -4394,16 +4394,16 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
 
             // Slide data for digital automation
             const DAslideData = [
-                { src: 'Source/da1.jpg', label: '' },
-                { src: 'Source/da2.png', label: '' },
-                { src: 'Source/da3.jpg', label: '' },
-                { src: 'Source/automation.png', label: '' }
+                { src: '/static/Source/da1.jpg', label: '' },
+                { src: '/static/Source/da2.png', label: '' },
+                { src: '/static/Source/da3.jpg', label: '' },
+                { src: '/static/Source/automation.png', label: '' }
             ];
 
             const PSslideData = [
-                { src: 'Source/ps1.png', label: '' },
-                { src: 'Source/ps2.JPG', label: '' },
-                { src: 'Source/magnetElect.jpg', label: '' }
+                { src: '/static/Source/ps1.png', label: '' },
+                { src: '/static/Source/ps2.JPG', label: '' },
+                { src: '/static/Source/magnetElect.jpg', label: '' }
             ];
 
             PSslideData.forEach((item, idx) => {
