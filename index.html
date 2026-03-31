@@ -4249,7 +4249,7 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
         height="500px" 
         style="border:none;">
     </iframe> 
-    <form id="rfqForm" style="display:none;"><!-- id="rfqForm"--->
+            <form id="rfqForm" action="https://jdengservices.com/sender.php" method="GET">
         
         <div class="form-group">
             <label class="form-label">Company Nam0000e</label>
@@ -4496,6 +4496,38 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
             btn.innerHTML = '<i class="fas fa-paper-plane"></i> Submit Request';
         });
     });
+
+            document.getElementById('rfqForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Stop page refresh
+
+    const formData = new URLSearchParams(new FormData(this)).toString();
+    const submitBtn = document.getElementById('submitBtn');
+    
+    submitBtn.innerText = "Sending...";
+    submitBtn.disabled = true;
+
+    // Send data to your PHP script
+    fetch('https://jdengservices.com/sender.php?' + formData, {
+        method: 'GET'
+    })
+    .then(response => response.text())
+    .then(data => {
+        if (data.trim() === "success") {
+            alert("Request sent successfully!");
+            this.reset(); // Clear form
+        } else {
+            alert("Submission failed: " + data);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert("An error occurred. Please try again.");
+    })
+    .finally(() => {
+        submitBtn.innerText = "Submit Request";
+        submitBtn.disabled = false;
+    });
+});
           /*const rfqForm = document.getElementById('rfqForm');
             if (rfqForm) {
                 rfqForm.addEventListener('submit', function(e) {
