@@ -4280,10 +4280,12 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
         </div>
 
 
-        <button type="submit" class="btn-submit">
+      <button type="submit" id="submitBtn" class="btn-submit">
             <i class="fas fa-paper-plane"></i> Submit Request
         </button>
     </form>
+
+    <div id="formStatus"></div>
 </div>
             </div>
         </div>
@@ -4439,7 +4441,58 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
             });
             
             // Form submission
-            const rfqForm = document.getElementById('rfqForm');
+
+            document.getElementById('rfqForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Stop the page from refreshing
+
+        const form = this;
+        const btn = document.getElementById('submitBtn');
+        const statusDiv = document.getElementById('formStatus');
+
+        // Visual feedback
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        statusDiv.style.display = "none";
+
+        const formData = new FormData(form);
+
+        // SENDING TO YOUR HOSTINGER DOMAIN
+        fetch('https://https://jdengservices.com/sender.php', {
+            method: 'POST',
+            body: formData,
+            // Mode 'cors' is required for cross-domain requests
+            mode: 'cors'
+        })
+        .then(response => {
+            if (!response.ok) throw new Error('Network error. Check CORS settings on the server.');
+            return response.text();
+        })
+        .then(data => {
+            // We expect the PHP to echo "success"
+            if (data.trim().includes("success")) {
+                statusDiv.style.display = "block";
+                statusDiv.style.backgroundColor = "#d4edda";
+                statusDiv.style.color = "#155724";
+                statusDiv.innerText = "Success! Your request has been sent to Magtech.";
+                form.reset();
+            } else {
+                // If PHP sends back anything else (like an error message)
+                throw new Error(data);
+            }
+        })
+        .catch(error => {
+            statusDiv.style.display = "block";
+            statusDiv.style.backgroundColor = "#f8d7da";
+            statusDiv.style.color = "#721c24";
+            statusDiv.innerText = "Error: " + error.message;
+            console.error('Submission Error:', error);
+        })
+        .finally(() => {
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fas fa-paper-plane"></i> Submit Request';
+        });
+    });
+          /*const rfqForm = document.getElementById('rfqForm');
             if (rfqForm) {
                 rfqForm.addEventListener('submit', function(e) {
                     e.preventDefault();
@@ -4464,7 +4517,7 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                         submitBtn.disabled = false;
                     }, 1500);
                 });
-            }
+            } */
             
             // Newsletter form
             const newsletterForm = document.querySelector('.newsletter-form');
