@@ -22,9 +22,9 @@
         .custom-navbar {
             background-color: #1e293b !important;
             border-bottom: 1px solid #334155;
-            padding: 0.75rem 0;
+            padding: 0.6rem 0;
             position: relative;
-            z-index: 20; /* Ensure navbar stays on top */
+            z-index: 20;
         }
 
         .navbar-brand { 
@@ -40,13 +40,12 @@
             z-index: 10;
         }
 
-        /* Force interactive pointer events on the iframe */
+        /* Interactive iFrame */
         .iframe-wrapper iframe {
             width: 100%;
             height: 100%;
             border: 0;
             display: block;
-            pointer-events: auto !important; /* Forces clicks to pass to iframe content */
         }
     </style>
 </head>
@@ -56,16 +55,20 @@
 <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
     <div class="container-fluid px-4">
         <a class="navbar-brand" href="index.php"><i class="fa-solid fa-computer me-2"></i> CMMS Broadcast</a>
-        <div class="ms-auto text-white small">
-            <i class="fa-solid fa-signal text-success me-1"></i> 
-    <a href="https://4mcengineeringservices.com/">Go to Site-></a>
+        
+        <div class="ms-auto d-flex align-items-center gap-3">
+            <div class="text-white small">
+                <i class="fa-solid fa-signal text-success me-1"></i> Live View
+            </div>
+            <a href="https://4mcengineeringservices.com/" target="_blank" class="btn btn-sm btn-outline-info">
+                Open Direct Site <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+            </a>
         </div>
     </div>
 </nav>
 
-<!-- FULL SCREEN EMBED WITH INTERACTIVE PERMISSIONS -->
+<!-- FULL SCREEN EMBEDDED IFRAME -->
 <div class="iframe-wrapper">
-    <a href="https://4mcengineeringservices.com/">Go to Site-></a>
     <iframe 
         src="https://4mcengineeringservices.com/" 
         title="CMMS Live Stream"
