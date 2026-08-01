@@ -6,26 +6,23 @@
     <meta name="keywords" content="plating, electronics, magtechelectronic, electronic components, MAGTECH">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-       <!--link rel="icon" type="image/png" href="{{ url_for('static', filename='Source/logo.png') }}"-->
-          <link rel="icon" type="image/png" href="Source/logo.png">
-    
+    <link rel="icon" type="image/png" href="Source/logo.png">
     <link rel="apple-touch-touch-icon" href="Source/logo.png">
     <style>
         /* Clean & Readable Variables */
         :root { 
-            /* Palette: Red, Metal grey, White, Light grey, Grey, Black, Green */
-            --primary: #0681b6;         /* deep blue (primary) */
-            --primary-light: #ff000075;   /* lighter red */
-            --accent: #ff0000;          /* red accent */
-            --accent-light: #00ffe5;    /* light green (used minimally) */
-            --electric-blue: #00d9ff;   /* vivid blue for glow */
-            --electric-purple: #425b6f; /* metal grey for contrast/glow */
-            --text: #0b0b0b;            /* near black */
-            --text-light: #6b6f73;      /* muted grey */
+            --primary: #0681b6;
+            --primary-light: #ff000075;
+            --accent: #ff0000;
+            --accent-light: #00ffe5;
+            --electric-blue: #00d9ff;
+            --electric-purple: #425b6f;
+            --text: #0b0b0b;
+            --text-light: #6b6f73;
             --bg-white: #FFFFFF;
-            --bg-light: #f5f5f5;        /* light grey background */
-            --bg-gray: #e6e8ea;         /* subtle grey */
-            --border: #d0d4d6;          /* soft border grey */
+            --bg-light: #f5f5f5;
+            --bg-gray: #e6e8ea;
+            --border: #d0d4d6;
             --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
             --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
             --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.1);
@@ -75,7 +72,6 @@
             padding: 80px 0;
         }
 
-        /* Typography Scale */
         .display-1 {
             font-size: 3.5rem;
             font-weight: 700;
@@ -111,7 +107,7 @@
             color: var(--text-light);
         }
 
-        /* Clean Navigation */
+        /* Navigation */
         .main-nav {
             position: fixed;
             top: 0;
@@ -204,7 +200,7 @@
         }
 
         .nav-btn {
-           background: var(--primary);
+            background: var(--primary);
             color: rgb(255, 255, 255);
             padding: 10px 24px;
             border-radius: 6px;
@@ -215,7 +211,7 @@
         }
 
         .nav-btn:hover {
-           background: rgba(0, 176, 179, 0.85);
+            background: rgba(0, 176, 179, 0.85);
             transform: translateY(-2px);
         }
 
@@ -235,21 +231,20 @@
             transition: var(--transition);
         }   
 
-        /* Enhanced Hero Section - Interactive & Animated */
+        /* Hero Section */
         .hero-section {
             padding: 70px 100px;
             background:linear-gradient(135deg, 
                 rgba(0, 0, 0, 0.903) 0%, 
                 rgba(0, 0, 0, 0.868) 50%, 
                 rgba(0, 0, 0, 0.604) 100%), url(Source/company.png) center/cover no-repeat; 
-                    position: relative;
+            position: relative;
             overflow: hidden;
             min-height: 100vh;
             display: flex;
             align-items: center;
         }
 
-        /* Animated Circuit Board Background */
         .circuit-board {
             position: absolute;
             top: 0;
@@ -269,7 +264,6 @@
             100% { background-position: 100px 100px; }
         }
 
-        /* Floating Electronics Particles */
         .particles-container {
             position: absolute;
             top: 0;
@@ -305,7 +299,6 @@
             }
         }
 
-        /* Electric Pulse Animation */
         .electric-pulse {
             position: absolute;
             width: 100%;
@@ -323,17 +316,28 @@
             opacity: 0;
         }
 
+        @keyframes pulse {
+            0% {
+                transform: scale(0.1);
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 0.4;
+            }
+            100% {
+                transform: scale(3);
+                opacity: 0;
+            }
+        }
+
         .slideshow-container1 {
             position: relative;  
             width: 30vw;
             max-width: 1100px;
             aspect-ratio: 16 / 9;
             height: 100%;
-            
-            /* The requested rounding */
             border-radius: 30px; 
             overflow: hidden; 
-            
             border: 2px solid #334155;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
         }
@@ -351,7 +355,6 @@
             object-fit: cover;
         }
 
-        /* Overlay Branding/Text */
         .overlay {
             position: absolute;
             top: 20px;
@@ -387,25 +390,11 @@
         }
 
         .active-dot {
-            background-color: #00f2fe; /* High-tech Cyan */
+            background-color: #00f2fe;
             width: 30px;
             border-radius: 10px;
         }
-        @keyframes pulse {
-            0% {
-                transform: scale(0.1);
-                opacity: 0.8;
-            }
-            50% {
-                opacity: 0.4;
-            }
-            100% {
-                transform: scale(3);
-                opacity: 0;
-            }
-        }
 
-        /* Interactive Data Flow Lines */
         .data-flow {
             position: absolute;
             width: 100%;
@@ -441,7 +430,6 @@
             }
         }
 
-        /* Glowing Nodes */
         .glowing-nodes {
             position: absolute;
             width: 100%;
@@ -474,7 +462,6 @@
             }
         }
 
-        /* Hero Container */
         .hero-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -484,7 +471,6 @@
             z-index: 2;
         }
 
-        /* Hero Content Animations */
         .hero-content {
             position: relative;
             animation: fadeInUp 1s ease-out;
@@ -498,58 +484,6 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
-            }
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: linear-gradient(45deg, 
-                var(--electric-blue), 
-                var(--electric-purple));
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 32px;
-            animation: slideInLeft 0.8s ease-out 0.2s both;
-            box-shadow: 0 4px 15px rgba(249, 249, 249, 0.08);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-badge::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(
-                45deg,
-                transparent 30%,
-                rgba(255, 255, 255, 0.12) 50%,
-                transparent 70%
-            );
-            transform: rotate(45deg);
-            animation: badgeShine 3s infinite linear;
-        }
-
-        @keyframes badgeShine {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-        }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
             }
         }
 
@@ -664,65 +598,9 @@
             box-shadow: 0 8px 25px rgba(255, 0, 0, 0.18);
         }
 
-        .hero-stats {
-            display: flex;
-            gap: 40px;
-            padding-top: 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.12);
-            animation: fadeInUp 1s ease-out 1s both;
-        }
-
-        .stat-item {
-            text-align: center;
-            position: relative;
-            padding: 0 20px;
-        }
-
-        .stat-item:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            right: -20px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 1px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.12);
-        }
-
-        .stat-number {
-            display: block;
-            font-size: 2.8rem;
-            font-weight: 700;
-            background: linear-gradient(45deg, 
-                var(--electric-blue), 
-                var(--electric-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1;
-            margin-bottom: 8px;
-            animation: countUp 2s ease-out forwards;
-            opacity: 0;
-        }
-
-        @keyframes countUp {
-            to {
-                opacity: 1;
-            }
-        }
-
-        .stat-label {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Enhanced Hero Visual */
         .hero-visual {
             position: relative;
-            background: #2D3748;;
+            background: #2D3748;
             border-radius: var(--radius);
             padding: 40px;
             box-shadow: var(--shadow-lg);
@@ -839,7 +717,6 @@
             line-height: 1.5;
         }
 
-        /* Interactive Cursor Effect */
         .cursor-dot {
             position: fixed;
             width: 8px;
@@ -864,7 +741,6 @@
             mix-blend-mode: screen;
         }
 
-        /* Typewriter Effect */
         .typewriter {
             display: inline-block;
             position: relative;
@@ -883,7 +759,7 @@
             50% { opacity: 0; }
         }
 
-        /* Enhanced SERVICES CATALOG Section */
+        /* Services Section */
         .services-section {
             background: linear-gradient(135deg, 
                 rgba(51, 51, 51, 0.623) 0%, 
@@ -894,7 +770,6 @@
             padding: 100px 0;
         }
 
-        /* Animated Background Elements */
         .services-section::before {
             content: '';
             position: absolute;
@@ -929,7 +804,6 @@
             z-index: 2;
         }
 
-        /* Floating Circuit Elements */
         .floating-circuits {
             position: absolute;
             width: 100%;
@@ -999,13 +873,11 @@
             overflow: hidden;
             box-shadow: 
                 0 20px 60px rgba(2, 2, 2, 0.53),
-                0 0 0 1px rgba(255, 255, 255, 0.37)
-               ;
+                0 0 0 1px rgba(255, 255, 255, 0.37);
             transform-style: preserve-3d;
             perspective: 100%;
         }
 
-        /* Enhanced Slide Animations */
         .slideshow-slide {
             position: absolute;
             top: 0;
@@ -1059,7 +931,6 @@
             opacity: 0;
         }
 
-        /* Enhanced Slide Image - More Responsive */
         .slide-image {
             flex: 1;
             min-width: 0;
@@ -1122,7 +993,6 @@
             transform: translateY(0);
         }
 
-        /* Enhanced Slide Content */
         .slide-content {
             flex: 1;
             min-width: 0;
@@ -1159,7 +1029,6 @@
             opacity: 0.95;
         }
 
-        /* Enhanced Services Features List */
         .services-features {
             list-style: none;
             margin: 30px 0;
@@ -1201,7 +1070,6 @@
             transform: scale(1.2) rotate(10deg);
         }
 
-        /* Enhanced Industry Tags */
         .industry-tags {
             display: flex;
             gap: 10px;
@@ -1228,7 +1096,6 @@
             box-shadow: 0 5px 15px rgba(0, 168, 89, 0.18);
         }
 
-        /* Enhanced Navigation Buttons */
         .carousel-btn {
             position: absolute;
             top: 50%;
@@ -1283,7 +1150,6 @@
             right: 30px;
         }
 
-        /* Enhanced Dots Navigation */
         .carousel-nav {
             display: flex;
             justify-content: center;
@@ -1334,7 +1200,7 @@
             border-color: var(--electric-blue);
         }
 
-        /* PRODUCT CATALOG Section - Matching Services Design */
+        /* Products Catalog */
         .products-catalog-section {
             background: linear-gradient(135deg, 
                 rgba(40, 41, 42, 0.95) 0%, 
@@ -1365,7 +1231,6 @@
             z-index: 2;
         }
 
-        /* Floating Circuit Elements for Products */
         .products-floating-circuits {
             position: absolute;
             width: 100%;
@@ -1377,7 +1242,6 @@
             opacity: 0.25;
         }
 
-        /* Products Carousel */
         .products-carousel {
             position: relative;
             max-width: 1200px;
@@ -1398,7 +1262,6 @@
             perspective: 1000px;
         }
 
-        /* Product Slides - Same as Services Slides */
         .product-slideshow-slide {
             position: absolute;
             top: 0;
@@ -1447,7 +1310,6 @@
             opacity: 0;
         }
 
-        /* Product Slide Image */
         .product-slide-image {
             flex: 1;
             min-width: 0;
@@ -1498,7 +1360,6 @@
             transform: translateY(0);
         }
 
-        /* Product Slide Content */
         .product-slide-content {
             flex: 1;
             min-width: 0;
@@ -1535,7 +1396,6 @@
             opacity: 0.95;
         }
 
-        /* Product Features List */
         .product-features-list {
             list-style: none;
             margin: 30px 0;
@@ -1559,7 +1419,6 @@
         .product-features-list li:nth-child(5) { animation-delay: 0.5s; }
         .product-features-list li:nth-child(6) { animation-delay: 0.6s; }
 
-        /* Section Styles */
         .section-header {
             text-align: center;
             margin-bottom: 60px;
@@ -1587,7 +1446,7 @@
             font-size: 1.125rem;
         }
 
-        /* Company Profile - Clean Layout */
+        /* Company Section */
         .company-section {
             background: var(--bg-white);
             position: relative;
@@ -1629,7 +1488,6 @@
             color: white;
         }
        
-        
         .company-section .highlight-content h4,
         .company-section .highlight-content p,
         .company-section .display-3,
@@ -1652,8 +1510,8 @@
         }
 
         .company-image {  
-             position: relative;
-            background: #2D3748;;
+            position: relative;
+            background: #2D3748;
             border-radius: var(--radius);
             padding: 40px;
             box-shadow: var(--shadow-lg);
@@ -1663,7 +1521,8 @@
             overflow: hidden;
             top:-50px;
         }
-      .company-image::before {
+
+        .company-image::before {
             content: '';
             position: absolute;
             top: 0;
@@ -1676,6 +1535,7 @@
                 #ff0000);
             animation: slideRight 3s infinite linear;
         }
+
         .slideshow-slide::before {
             content: '';
             position: absolute;
@@ -1689,6 +1549,7 @@
                 #ff0000);
             animation: slideRight 3s infinite linear;
         }
+
         .company-content h3 {
             margin-bottom: 24px;
         }
@@ -1744,7 +1605,7 @@
             line-height: 1.5;
         }
 
-        /* Production Workshop Section */
+        /* Production */
         .production-section {
             background: var(--bg-light);
             position: relative;
@@ -1817,7 +1678,7 @@
             font-size: 12px;
         }
 
-        /* Customer Section */
+        /* Customer */
         .customer-section {
             background: var(--bg-white);
         }
@@ -1884,7 +1745,7 @@
             font-weight: 500;
         }
 
-        /* Vision & Mission Section */
+        /* Vision & Mission */
         .vision-mission-section {
             background: var(--bg-light);
         }
@@ -1940,12 +1801,14 @@
             list-style: none;
             padding: 0;
         }
+
         .vm-card ul li {
             margin-bottom: 8px;
             display: flex;
             align-items: center;
             gap: 8px;
         }
+
         .vm-card ul li i {
             color: var(--accent);
             font-size: 14px;
@@ -2114,6 +1977,41 @@
             transform: translateY(-2px);
         }
 
+        .btn-submit:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        /* Form Status */
+        #formStatus {
+            display: none;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+
+        #formStatus.success {
+            display: block;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        #formStatus.error {
+            display: block;
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        #formStatus.loading {
+            display: block;
+            background-color: #cce5ff;
+            color: #004085;
+            border: 1px solid #b8daff;
+        }
+
         /* Footer */
         .main-footer {
             background: var(--primary);
@@ -2217,36 +2115,7 @@
             text-decoration: none;
         }
 
-        /* Animation for readability */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Utility Classes */
-        .text-center {
-            text-align: center;
-        }
-
-        .mb-4 {
-            margin-bottom: 24px;
-        }
-
-        .mb-3 {
-            margin-bottom: 16px;
-        }
-
-        .mt-4 {
-            margin-top: 24px;
-        }
-
-        /* Map Modal Styles */
+        /* Map Modal */
         .map-modal {
             display: none;
             position: fixed;
@@ -2386,36 +2255,12 @@
             border-color: var(--accent);
         }
 
-        /* Enhanced image responsiveness */
         img {
             max-width: 100%;
             height: auto;
         }
 
-        /* Specific image responsiveness for product slides */
-        .product-slide-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        /* Production images */
-        .production-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        /* Customer logo images */
-        .customer-logo img {
-            max-width: 110%;
-            max-height: 110%;
-            object-fit: contain;
-        }
-
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 1200px) {
             .container {
                 max-width: 100%;
@@ -2633,6 +2478,10 @@
             .map-actions {
                 flex-direction: column;
             }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 576px) {
@@ -2681,7 +2530,7 @@
             }
             
             .customer-logos {
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(2, 1fr);
             }
             
             .footer-grid {
@@ -2713,650 +2562,16 @@
                 padding: 15px;
             }
         }
-        
-        /* ----- RESET & VARIABLES ----- */
-        :root {
-            --primary: #0681b6;
-            --primary-dark: #055c83;
-            --accent: #ff0000;
-            --accent-dark: #cc0000;
-            --electric-blue: #00d9ff;
-            --electric-purple: #425b6f;
-            --text: #0b0b0b;
-            --text-light: #4a5568;
-            --bg-white: #FFFFFF;
-            --bg-light: #f8fafc;
-            --bg-gray: #eef2f6;
-            --border: #e2e8f0;
-            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
-            --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
-            --radius: 16px;
-            --transition: all 0.25s ease;
-        }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-white);
-            color: var(--text);
-            line-height: 1.6;
-            font-size: 16px;
-            overflow-x: hidden;
-        }
-
-        body.modal-open {
-            overflow: hidden;
-        }
-
-        h1, h2, h3, h4, h5 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            line-height: 1.25;
-            letter-spacing: -0.02em;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        section {
-            padding: 80px 0;
-        }
-
-        /* Typography */
-        .display-1 { font-size: 3.2rem; font-weight: 800; line-height: 1.2; }
-        .display-2 { font-size: 2.5rem; font-weight: 700; line-height: 1.3; }
-        .display-3 { font-size: 2rem; font-weight: 700; }
-        .lead-text { font-size: 1.2rem; color: var(--text-light); line-height: 1.5; }
-        .body-text { font-size: 1rem; color: var(--text); }
-        .caption { font-size: 0.85rem; color: var(--text-light); }
-
-        /* Navigation - Mobile First Improvements */
-        .main-nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255,255,255,0.98);
-            backdrop-filter: blur(8px);
-            box-shadow: var(--shadow-sm);
-            z-index: 1000;
-            padding: 12px 0;
-            transition: var(--transition);
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-        }
-
-        .brand-icon {
-            width: 160px;
-            height: auto;
-        }
-        .brand-icon img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-link {
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            padding: 8px 0;
-            transition: var(--transition);
-            position: relative;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent);
-            transition: var(--transition);
-        }
-        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
-        .nav-link:hover { color: var(--accent); }
-
-        .nav-btn {
-            background: var(--primary);
-            color: white;
-            padding: 10px 22px;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .nav-btn:hover { background: var(--primary-dark); transform: translateY(-2px); }
-
-        .mobile-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 6px;
-            cursor: pointer;
-            padding: 8px;
-            z-index: 1001;
-        }
-        .mobile-toggle span {
-            width: 26px;
-            height: 2px;
-            background: var(--primary);
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-
-        /* Hero Section - Mobile Optimized */
-        .hero-section {
-            padding: 120px 0 80px;
-            background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.75) 100%), url(Source/company.png) center/cover no-repeat;
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
-        .hero-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-        .hero-content { animation: fadeInUp 0.8s ease-out; }
-        .hero-title { color: white; margin-bottom: 20px; }
-        .hero-subtitle {
-            background: rgba(0,0,0,0.6);
-            backdrop-filter: blur(8px);
-            padding: 20px 24px;
-            border-radius: 20px;
-            border-left: 4px solid var(--accent);
-            margin-bottom: 32px;
-            color: rgba(255,255,255,0.95);
-            font-size: 1rem;
-        }
-        .hero-actions {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-        }
-        .btn-primary, .btn-secondary {
-            padding: 14px 28px;
-            border-radius: 40px;
-            font-weight: 700;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: var(--transition);
-            font-size: 0.95rem;
-        }
-        .btn-primary {
-            background: var(--accent);
-            color: white;
-            box-shadow: 0 4px 12px rgba(255,0,0,0.3);
-        }
-        .btn-primary:hover { background: var(--accent-dark); transform: translateY(-3px); }
-        .btn-secondary {
-            background: rgba(255,255,255,0.12);
-            color: white;
-            border: 1px solid rgba(255,255,255,0.3);
-            backdrop-filter: blur(4px);
-        }
-        .btn-secondary:hover { background: rgba(255,255,255,0.25); transform: translateY(-3px); }
-
-        .hero-visual {
-            background: rgba(0,0,0,0.45);
-            backdrop-filter: blur(12px);
-            border-radius: var(--radius);
-            padding: 24px;
-            border: 1px solid rgba(255,255,255,0.15);
-        }
-        .visual-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-        .visual-item {
-            background: rgba(255,255,255,0.05);
-            border-radius: 16px;
-            padding: 20px;
-            transition: var(--transition);
-            cursor: pointer;
-            text-align: center;
-        }
-        .visual-item:hover { transform: translateY(-5px); background: rgba(255,255,255,0.1); }
-        .visual-icon {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, var(--electric-blue), var(--primary));
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 16px;
-        }
-        .visual-icon i { font-size: 26px; color: white; }
-        .visual-item h4 { color: white; font-size: 1rem; margin-bottom: 8px; }
-        .visual-item p { color: rgba(255,255,255,0.8); font-size: 0.8rem; }
-
-        /* Services & Products Carousels - Mobile Friendly */
-        .services-section, .products-catalog-section {
-            background: var(--bg-light);
-            position: relative;
-            overflow: hidden;
-        }
-        .slideshow-container, .products-slideshow-container {
-            position: relative;
-            height: 560px;
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-        }
-        .slideshow-slide, .product-slideshow-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            gap: 32px;
-            padding: 40px;
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
-            transition: transform 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.5s ease;
-            opacity: 0;
-            transform: translateX(30px);
-        }
-        .slideshow-slide.active, .product-slideshow-slide.active {
-            opacity: 1;
-            transform: translateX(0);
-            z-index: 2;
-        }
-        .slide-image, .product-slide-image {
-            flex: 1;
-            height: 100%;
-            border-radius: 20px;
-            overflow: hidden;
-            background-size: cover;
-            background-position: center;
-            box-shadow: var(--shadow-md);
-        }
-        .slide-image img, .product-slide-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        .slide-content, .product-slide-content {
-            flex: 1;
-            color: white;
-        }
-        .slide-content h3, .product-slide-content h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: var(--electric-blue);
-        }
-        .services-features, .product-features-list {
-            list-style: none;
-            margin: 24px 0;
-        }
-        .services-features li, .product-features-list li {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-        }
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0,0,0,0.6);
-            backdrop-filter: blur(4px);
-            border: none;
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            color: white;
-            font-size: 20px;
-            cursor: pointer;
-            z-index: 20;
-            transition: var(--transition);
-        }
-        .carousel-btn.prev { left: 20px; }
-        .carousel-btn.next { right: 20px; }
-        .carousel-btn:hover { background: var(--accent); transform: translateY(-50%) scale(1.05); }
-        .carousel-nav {
-            display: flex;
-            justify-content: center;
-            gap: 14px;
-            margin-top: 32px;
-        }
-        .carousel-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #cbd5e1;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-        .carousel-dot.active {
-            background: var(--accent);
-            transform: scale(1.3);
-            box-shadow: 0 0 8px var(--accent);
-        }
-
-        /* Inner Slideshow (nested) */
-        .slideshow-container1 {
-            width: 100%;
-            max-width: 320px;
-            aspect-ratio: 16 / 9;
-            border-radius: 24px;
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.2);
-            box-shadow: var(--shadow-md);
-            background: #000;
-        }
-        .slides-wrapper {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            transition: transform 0.6s cubic-bezier(0.2,0.9,0.4,1.1);
-        }
-        .slide { min-width: 100%; height: 100%; object-fit: cover; }
-        .dot-container {
-            position: absolute;
-            bottom: 12px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 8px;
-            background: rgba(0,0,0,0.5);
-            padding: 6px 12px;
-            border-radius: 40px;
-        }
-        .dot {
-            width: 8px;
-            height: 8px;
-            background: rgba(255,255,255,0.5);
-            border-radius: 50%;
-            cursor: pointer;
-        }
-        .active-dot { background: var(--electric-blue); width: 20px; border-radius: 10px; }
-
-        /* Company Section */
-        .company-section {
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: white;
-        }
-        .company-section .section-title, .company-section .section-label { color: white; }
-        .company-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-        .company-highlights {
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-            gap: 16px;
-            margin-top: 24px;
-        }
-        .highlight-item { display: flex; gap: 12px; align-items: flex-start; }
-        .highlight-icon {
-            width: 28px;
-            height: 28px;
-            background: var(--accent);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .highlight-icon i { font-size: 14px; color: white; }
-        .company-image .visual-item { background: rgba(255,255,255,0.08); }
-
-        /* Production, Customers, etc */
-        .production-grid, .vm-grid, .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            gap: 30px;
-        }
-        .production-card, .vm-card, .contact-info, .contact-form {
-            background: white;
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-        }
-        .production-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
-        .production-image { height: 220px; overflow: hidden; }
-        .production-image img { width: 100%; height: 100%; object-fit: cover; }
-        .production-content { padding: 24px; }
-        .customer-logos {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 24px;
-            align-items: center;
-        }
-        .customer-logo {
-            background: white;
-            padding: 20px;
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-        }
-        .customer-logo img { max-width: 100px; max-height: 60px; object-fit: contain; filter: brightness(0.9); }
-        .customer-logo:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-
-        /* Contact & Footer */
-        .contact-item { display: flex; gap: 18px; margin-bottom: 28px; }
-        .contact-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--bg-light);
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .form-control, .form-select {
-            width: 100%;
-            padding: 14px 16px;
-            border: 2px solid var(--border);
-            border-radius: 14px;
-            font-family: inherit;
-        }
-        .btn-submit {
-            width: 100%;
-            padding: 14px;
-            background: var(--accent);
-            color: white;
-            border: none;
-            border-radius: 40px;
-            font-weight: 700;
-            cursor: pointer;
-        }
-        .main-footer {
-            background: var(--primary-dark);
-            color: white;
-            padding: 60px 0 30px;
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 40px;
-        }
-        .footer-links h4 { color: white; margin-bottom: 20px; }
-        .footer-links ul { list-style: none; }
-        .footer-links li { margin-bottom: 12px; }
-        .footer-links a { color: rgba(255,255,255,0.8); text-decoration: none; display: flex; align-items: center; gap: 8px; }
-
-        /* Map Modal */
-        .map-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.85);
-            z-index: 2000;
-            align-items: center;
-            justify-content: center;
-        }
-        .map-modal.active { display: flex; }
-        .map-modal-content {
-            background: white;
-            border-radius: 28px;
-            width: 90%;
-            max-width: 800px;
-            overflow: hidden;
-        }
-        .map-container { height: 350px; }
-        .map-iframe { width: 100%; height: 100%; border: none; }
-
-        /* ========== RESPONSIVE MOBILE IMPROVEMENTS ========== */
-        @media (max-width: 1024px) {
-            .hero-container, .company-grid, .contact-grid, .production-grid { grid-template-columns: 1fr; gap: 40px; }
-            .slideshow-container, .products-slideshow-container { height: auto; min-height: 550px; }
-            .slideshow-slide, .product-slideshow-slide { flex-direction: column; padding: 30px; gap: 24px; position: relative; height: auto; }
-            .slide-image, .product-slide-image { width: 100%; height: 260px; }
-            .slide-content, .product-slide-content { text-align: center; width: 100%; }
-            .hero-visual .visual-grid { grid-template-columns: repeat(2,1fr); }
-        }
-
-        @media (max-width: 768px) {
-            section { padding: 60px 0; }
-            .display-1 { font-size: 2.2rem; }
-            .display-2 { font-size: 1.8rem; }
-            .container { padding: 0 20px; }
-            
-            /* Mobile Navigation */
-            .mobile-toggle { display: flex; }
-            .nav-links {
-                position: fixed;
-                top: 70px;
-                left: 0;
-                right: 0;
-                background: white;
-                flex-direction: column;
-                padding: 30px 24px;
-                gap: 20px;
-                box-shadow: var(--shadow-lg);
-                transform: translateY(-120%);
-                opacity: 0;
-                transition: 0.3s cubic-bezier(0.2,0.9,0.4,1.1);
-                z-index: 999;
-                border-radius: 0 0 24px 24px;
-            }
-            .nav-links.active { transform: translateY(0); opacity: 1; }
-            .mobile-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
-            .mobile-toggle.active span:nth-child(2) { opacity: 0; }
-            .mobile-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
-            
-            /* Hero */
-            .hero-section { padding: 100px 0 60px; }
-            .hero-actions { flex-direction: column; }
-            .btn-primary, .btn-secondary { justify-content: center; }
-            .hero-visual .visual-grid { grid-template-columns: 1fr; gap: 16px; }
-            .hero-subtitle { font-size: 0.95rem; padding: 16px; }
-            
-            /* Inner slideshow */
-            .slideshow-container1 { max-width: 100%; width: 100%; margin-bottom: 16px; }
-            
-            /* Carousel buttons bigger tap area */
-            .carousel-btn { width: 44px; height: 44px; font-size: 18px; }
-            .carousel-btn.prev { left: 10px; }
-            .carousel-btn.next { right: 10px; }
-            
-            /* Company highlights */
-            .company-highlights { grid-template-columns: 1fr; }
-            
-            /* Production & VM */
-            .production-grid, .vm-grid { grid-template-columns: 1fr; }
-            .vm-card { text-align: center; }
-            .footer-grid { grid-template-columns: 1fr; gap: 30px; text-align: center; }
-            .footer-links ul { display: flex; flex-direction: column; align-items: center; }
-            
-            /* Stats */
-            .hero-stats { flex-direction: column; align-items: center; gap: 20px; }
-            
-            /* Contact */
-            .contact-item { flex-direction: column; align-items: center; text-align: center; }
-            .contact-icon { margin: 0 auto; }
-        }
-        
-        @media (max-width: 480px) {
-            .hero-title { font-size: 1.8rem; }
-            .slide-content h3, .product-slide-content h3 { font-size: 1.5rem; }
-            .slideshow-slide, .product-slideshow-slide { padding: 20px; }
-            .slide-image, .product-slide-image { height: 180px; }
-            .visual-item { padding: 16px; }
-            .customer-logos { grid-template-columns: repeat(2,1fr); gap: 12px; }
-            .carousel-dot { width: 10px; height: 10px; }
-            .map-container { height: 250px; }
-        }
-        
-        /* Animations */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        /* Disable custom cursor on touch devices */
         @media (pointer: coarse) {
             .cursor-dot, .cursor-ring { display: none; }
         }
-        .cursor-dot, .cursor-ring { display: none; } /* initially hidden, will show on desktop via JS */
+
+        .cursor-dot, .cursor-ring { display: none; }
+
         @media (min-width: 1024px) {
             .cursor-dot, .cursor-ring { display: block; }
         }
-        
-        /* Utility */
-        .section-header { text-align: center; margin-bottom: 48px; }
-        .section-label { display: inline-block; background: var(--accent); color: white; padding: 6px 16px; border-radius: 40px; font-size: 0.8rem; font-weight: 600; margin-bottom: 16px; }
-        .section-title { margin-bottom: 16px; }
-    
     </style>
 </head>
 <body>
@@ -3372,7 +2587,6 @@
                     <div class="brand-icon">
                         <img src="Source/magnet.png" width="100%" height="100%">
                     </div>
-                   
                 </a>
                 
                 <div class="mobile-toggle" id="mobileToggle">
@@ -3395,29 +2609,23 @@
         </div>
     </nav>
 
-    <!-- Enhanced Hero Section -->
+    <!-- Hero Section -->
     <section id="home" class="hero-section">
-        <!-- Animated Circuit Board -->
         <div class="circuit-board"></div>
-        
-        <!-- Floating Particles -->
         <div class="particles-container" id="particles"></div>
         
-        <!-- Electric Pulses -->
         <div class="electric-pulse">
             <div class="pulse" style="top: 20%; left: 20%;"></div>
             <div class="pulse" style="top: 60%; left: 70%; animation-delay: 1s;"></div>
             <div class="pulse" style="top: 40%; left: 40%; animation-delay: 2s;"></div>
         </div>
         
-        <!-- Data Flow Lines -->
         <div class="data-flow">
             <div class="flow-line" style="top: 30%; width: 30%; animation-delay: 0s;"></div>
             <div class="flow-line" style="top: 50%; width: 40%; animation-delay: 1s;"></div>
             <div class="flow-line" style="top: 70%; width: 35%; animation-delay: 2s;"></div>
         </div>
         
-        <!-- Glowing Nodes -->
         <div class="glowing-nodes">
             <div class="node" style="top: 15%; left: 10%;"></div>
             <div class="node" style="top: 25%; left: 85%;"></div>
@@ -3430,18 +2638,12 @@
         <div class="container">
             <div class="hero-container">
                 <div class="hero-content">
-                    <!--div class="hero-badge">
-                        <i class="fas fa-bolt"></i>
-                        <span>ESTABLISHED 2024</span>
-                    </div-->
-                    
                     <h1 class="display-1 hero-title">
                         <span class="typewriter" style="color:#ffffff;">Component Electronic Solutions</span>
                     </h1>
                     
                     <p class="lead-text hero-subtitle"><u style="color:#00d9ff;">MAGTECH Electronics Inc.,</u> founded in 2024, delivers advanced electronic component solutions with expertise in precision electroplating, magnetic components, automated inspection, and specialized packaging.
 The company operates two strategic manufacturing sites—Laguna, Philippines and Dongguan, China—enabling responsive regional support and reliable global supply for customers in the electronics industry.
-
                     </p>
                     
                     <div class="hero-actions">
@@ -3493,20 +2695,16 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
         </div>
     </section>
 
-    <!-- Company Profile (Updated with new Company Overview) -->
+    <!-- Company Profile -->
     <section id="about" class="company-section">
         <div class="container">
             <div class="section-header">
-               
                 <h2 class="display-2 section-title" style="color:#f5f5f5;">Company Profile</h2>
-              
             </div>
             
             <div class="company-grid">
                 <div class="company-content">
-                    
                     <div class="company-text hero-subtitle">
-                       
                         <p class="body-text" style="margin-top: 20px;">
                             <strong>Electronics Magnetics: Molded & Assembled Solutions · Plating Excellence</strong>
                         </p>
@@ -3519,20 +2717,14 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                               Emphasizing innovation, the company is also focused on developing cutting-edge inductor designs, 
                               performing electronic device repairs, and supplying critical electronic consumables,
                               establishing itself as a trusted partner in the electronics sector.
-
                         </p>
                     </div>
-                      <p>MagTech is a technology-driven manufacturer specializing in:</p>
+                    <p>MagTech is a technology-driven manufacturer specializing in:</p>
                     <div class="company-highlights" style="color:#f5f5f5;"> 
-                          
-                       
                         <div class="highlight-item">
-                           
-                      
                             <div class="highlight-icon">
                                 <i class="fas fa-check"></i>
                             </div>
-
                             <div class="highlight-content">
                                 <p style="color:#f5f5f5;">Low-high inductance magnetics</p>
                             </div>
@@ -3569,7 +2761,6 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                 
                 <div class="company-image">
                     <div class="visual-grid">
-                        <!-- Map location item with pop-up trigger -->
                         <div class="visual-item" id="lagunaLocation">
                             <div class="visual-icon">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -3610,10 +2801,9 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
         </div>
     </section>
 
-    <!-- Enhanced SERVICES CATALOG Section -->
+    <!-- Services Catalog -->
     <section id="services" class="services-section">
         <div class="container">
-            <!-- Floating Circuit Background -->
             <div class="floating-circuits">
                 <div class="circuit-path" style="top: 20%; animation-delay: 0s;"></div>
                 <div class="circuit-path" style="top: 40%; animation-delay: 1s;"></div>
@@ -3630,28 +2820,18 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
             <div class="section-header">
                 <div class="section-label">OUR SERVICES</div>
                 <h2 class="display-2 section-title">Services Catalog</h2>
-               
             </div>
             
             <div class="services-carousel">
                 <div class="slideshow-container" id="servicesSlideshow">
-                    <!-- Slide 1: Inductance -->
+                    <!-- Slide 1 -->
                     <div class="slideshow-slide active" id="slide1">
                         <div class="slideshow-container1">
-                                <div class="overlay" id="slide-label"></div>
-        
-                                <div id="slides-wrapper" class="slides-wrapper">
-                                </div>
-
+                            <div class="overlay" id="slide-label"></div>
+                            <div id="slides-wrapper" class="slides-wrapper"></div>
                             <div id="dot-container" class="dot-container"></div>
                         </div>
-                        <!--div class="slide-image " style="background-image: url('Source/Plating.png');">
-                            <div class="slide-image-overlay">
-                                <h4>Inductance Solutions</h4>
-                                <p>Advanced components for various applications</p>
-                            </div>
-                        </div-->
-                        <div class="slide-content ">
+                        <div class="slide-content">
                             <h3>Inductance Solutions</h3>
                             <p>Advanced inductance solutions including DR (Drum), FP (Flat), TL (Toroidal), OP (Open), HC (High Current), and specialized Toroidal components for various electronic applications.</p>
                             <ul class="services-features hero-subtitle">
@@ -3669,29 +2849,17 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                         </div>
                     </div>
                     
-                    <!-- Slide 2: Plating -->
+                    <!-- Slide 2 -->
                     <div class="slideshow-slide" id="slide2">
-                         
                         <div class="slideshow-container1">
-                                <div class="overlay" id="PS-label"></div>
-        
-                                <div id="PS-wrapper" class="slides-wrapper">
-                                </div>
-
-                                <div id="PS-container" class="dot-container"></div>
+                            <div class="overlay" id="PS-label"></div>
+                            <div id="PS-wrapper" class="slides-wrapper"></div>
+                            <div id="PS-container" class="dot-container"></div>
                         </div>
-                        <!--div class="slide-image" style="background-image: url('Source/Plate.png');">
-                            <div class="slide-image-overlay">
-                                <h4>Plating Services</h4>
-                                <p>Precision surface finishing solutions</p>
-
-                            </div>
-                        </div-->
-                      
                         <div class="slide-content">
                             <h3>Plating Services</h3>
                             <p>Precision electroplating with Nickel (Ni), Copper (Cu), Tin (Sn), and Gold (Au) finishes. Our advanced plating techniques ensure superior conductivity and corrosion resistance.</p>
-                            <ul class="services-features  hero-subtitle">
+                            <ul class="services-features hero-subtitle">
                                 <li><i class="fas fa-check"></i> Nickel (Ni) Plating</li>
                                 <li><i class="fas fa-check"></i> Copper (Cu) Plating</li>
                                 <li><i class="fas fa-check"></i> Tin (Sn) Plating</li>
@@ -3706,7 +2874,7 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                         </div>
                     </div>
                     
-                    <!-- Slide 3: Testing -->
+                    <!-- Slide 3 -->
                     <div class="slideshow-slide" id="slide3">
                         <div class="slide-image" style="background-image: url('Source/AOI.png'); background-size: contain; background-repeat: no-repeat; background-position: center;">
                             <div class="slide-image-overlay">
@@ -3717,7 +2885,7 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                         <div class="slide-content">
                             <h3>Testing Services</h3>
                             <p>Comprehensive testing solutions including RC (Resistance-Capacitance), OCL (Open-Short-Load), Thx (Thermal), and XRF (X-Ray Fluorescence) testing for quality assurance.</p>
-                            <ul class="services-features  hero-subtitle">
+                            <ul class="services-features hero-subtitle">
                                 <li><i class="fas fa-check"></i> RC Testing</li>
                                 <li><i class="fas fa-check"></i> OCL Testing</li>
                                 <li><i class="fas fa-check"></i> Thermal Testing</li>
@@ -3732,10 +2900,9 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                         </div>
                     </div>
                     
-                    <!-- Slide 4: PCBA -->
-                    <div class="slideshow-slide" id="slide4"> 
+                    <!-- Slide 4 -->
+                    <div class="slideshow-slide" id="slide4">
                         <div class="slide-image" style="background-image: url('Source/smt.png'); background-size: contain; background-repeat: no-repeat; background-position: center;">
-                   
                             <div class="slide-image-overlay">
                                 <h4>PCB Assembly</h4>
                                 <p>Complete board solutions</p>
@@ -3744,7 +2911,7 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                         <div class="slide-content">
                             <h3>PCB Assembly</h3>
                             <p>Complete PCB assembly services for single and multi-layer boards. Our state-of-the-art facilities ensure precision assembly and reliable performance for all your electronic applications.</p>
-                            <ul class="services-features  hero-subtitle">
+                            <ul class="services-features hero-subtitle">
                                 <li><i class="fas fa-check"></i> Single-Layer PCBs</li>
                                 <li><i class="fas fa-check"></i> Multi-Layer PCBs</li>
                                 <li><i class="fas fa-check"></i> SMT Assembly</li>
@@ -3759,27 +2926,17 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                         </div>
                     </div>
                     
-                    <!-- Slide 5: Automation -->
+                    <!-- Slide 5 -->
                     <div class="slideshow-slide" id="slide5">
-                        <!--div class="slide-image" style="background-image: url('Source/automation.png');">
-                            <div class="slide-image-overlay">
-                                <h4>Automation & Digitalization</h4>
-                                <p>Smart manufacturing solutions</p>
-                            </div>
-                        </div-->
-
                         <div class="slideshow-container1">
-                                <div class="overlay" id="DA-label"></div>
-        
-                                <div id="DA-wrapper" class="slides-wrapper">
-                                </div>
-
+                            <div class="overlay" id="DA-label"></div>
+                            <div id="DA-wrapper" class="slides-wrapper"></div>
                             <div id="DA-container" class="dot-container"></div>
                         </div>
                         <div class="slide-content">
                             <h3>Automation & Digitalization</h3>
                             <p>Advanced automation solutions and digital transformation services to optimize your manufacturing processes, improve efficiency, and enhance product quality.</p>
-                            <ul class="services-features  hero-subtitle">
+                            <ul class="services-features hero-subtitle">
                                 <li><i class="fas fa-check"></i> Automated Assembly Lines</li>
                                 <li><i class="fas fa-check"></i> Digital Process Control</li>
                                 <li><i class="fas fa-check"></i> Smart Manufacturing</li>
@@ -3795,7 +2952,6 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                     </div>
                 </div>
                 
-                <!-- Navigation Buttons -->
                 <button class="carousel-btn prev" id="servicesPrevBtn">
                     <i class="fas fa-chevron-left"></i>
                 </button>
@@ -3803,7 +2959,6 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                     <i class="fas fa-chevron-right"></i>
                 </button>
                 
-                <!-- Dots Navigation -->
                 <div class="carousel-nav">
                     <div class="carousel-dot active" data-slide="0"></div>
                     <div class="carousel-dot" data-slide="1"></div>
@@ -3815,10 +2970,9 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
         </div>
     </section>
 
-    <!-- Enhanced PRODUCT CATALOG Section (Matching Services Design) -->
+    <!-- Products Catalog -->
     <section id="products" class="products-catalog-section">
         <div class="container">
-            <!-- Floating Circuit Background -->
             <div class="floating-circuits products-floating-circuits">
                 <div class="circuit-path" style="top: 30%; animation-delay: 0.5s;"></div>
                 <div class="circuit-path" style="top: 50%; animation-delay: 1.5s;"></div>
@@ -3834,12 +2988,10 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
             <div class="section-header">
                 <div class="section-label">OUR PRODUCTS</div>
                 <h2 class="display-2 section-title">Product Catalog</h2>
-             
             </div>
             
             <div class="products-carousel">
                 <div class="products-slideshow-container" id="productsSlideshow">
-                    <!-- Product Slide 1: Magnetic Components -->
                     <div class="product-slideshow-slide active" id="productSlide1">
                         <div class="product-slide-image">
                             <img src="Source/p1.jpg" alt="Magnetic Components">
@@ -3867,7 +3019,6 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                         </div>
                     </div>
                     
-                    <!-- Product Slide 2: Electroplated Components -->
                     <div class="product-slideshow-slide" id="productSlide2">
                         <div class="product-slide-image">
                             <img src="Source/Plate.png" alt="Electroplated Components">
@@ -3895,7 +3046,6 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                         </div>
                     </div>
                     
-                    <!-- Product Slide 3: PCB Assemblies -->
                     <div class="product-slideshow-slide" id="productSlide3">
                         <div class="product-slide-image">
                             <img src="Source/pcb_board.png" alt="PCB Assemblies">
@@ -3923,7 +3073,6 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                         </div>
                     </div>
                     
-                    <!-- Product Slide 4: Tested Components -->
                     <div class="product-slideshow-slide" id="productSlide4">
                         <div class="product-slide-image">
                             <img src="Source/AOI.png" alt="Tested Components">
@@ -3952,7 +3101,6 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                     </div>
                 </div>
                 
-                <!-- Navigation Buttons -->
                 <button class="carousel-btn prev" id="productsPrevBtn">
                     <i class="fas fa-chevron-left"></i>
                 </button>
@@ -3960,7 +3108,6 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                     <i class="fas fa-chevron-right"></i>
                 </button>
                 
-                <!-- Dots Navigation -->
                 <div class="carousel-nav product-nav">
                     <div class="carousel-dot active" data-product-slide="0"></div>
                     <div class="carousel-dot" data-product-slide="1"></div>
@@ -3977,16 +3124,12 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
             <div class="section-header">
                 <div class="section-label">OUR FACILITIES</div>
                 <h2 class="display-2 section-title" style="color: #2D3748;">Production Workshop</h2>
-                <p class="section-description" style="color: #2D3748;">
-                </p>
             </div>
             
             <div class="production-grid">
                 <div class="production-card">
                     <div class="production-image">
-                        <!--slide -->
                         <img src="Source/psv3.jpg" alt="Plating Automated Lines">
-                        
                     </div>
                     <div class="production-content">
                         <h3>Plating Automated Lines</h3>
@@ -4053,18 +3196,15 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
         </div>
     </section>
 
-    <!-- Customer Section -->
+    <!-- Customers -->
     <section id="customers" class="customer-section">
         <div class="container">
             <div class="section-header">
                 <div class="section-label">OUR PARTNERS</div>
                 <h2 class="display-2 section-title" style="color: #2D3748;">Trusted by Industry Leaders</h2>
-                <p class="section-description" style="color: #2D3748;">
-                </p>
             </div>
             
             <div class="customer-logos">
-                <!-- Replace these with actual customer logos -->
                 <div class="customer-logo">
                     <img src="Source/nxp.png" alt="Data Center Technology Partner">
                 </div>
@@ -4114,14 +3254,12 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
         </div>
     </section>
 
-    <!-- Vision & Mission (Updated) -->
+    <!-- Vision & Mission -->
     <section id="vision" class="vision-mission-section">
         <div class="container">
             <div class="section-header">
                 <div class="section-label">OUR PHILOSOPHY</div>
                 <h2 class="display-2 section-title" style="color: #2D3748;">Vision, Mission & Capabilities</h2>
-                <p class="section-description" style="color: #2D3748;">
-                </p>
             </div>
             
             <div class="vm-grid">
@@ -4163,18 +3301,72 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
         </div>
     </section>
 
-    <!-- Contact Section with Form -->
+    <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="section-header">
                 <div class="section-label">GET IN TOUCH</div>
                 <h2 class="display-2 section-title" style="color: #2D3748;">Contact us</h2>
-                <p class="section-description" style="color: #2D3748;"></p>
             </div>
             
             <div class="contact-grid">
                 <div class="contact-info">
-                    <!-- Your contact info here -->
+                    <div class="contact-header">
+                        <h3 class="display-3 mb-3">Contact Information</h3>
+                        <p>Reach out to our manufacturing facilities worldwide for your electronic component needs.</p>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h4>Philippines Facility</h4>
+                                <p>Laguna, Philippines</p>
+                                <p class="caption">Primary manufacturing hub</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h4>China Facility</h4>
+                                <p>Dongguan, China</p>
+                                <p class="caption">Strategic manufacturing site</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h4>Email Address</h4>
+                                <p>adminhazel@magtechelectronics.com</p>
+                                <p class="caption">For sales inquiries</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h4>Contact Number</h4>
+                                <p>+639458424277</p>
+                                <p class="caption">For sales inquiries</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
                 
                 <div class="contact-form">
@@ -4229,15 +3421,10 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                 <div class="footer-brand">
                     <a href="#" class="brand">
                         <div class="brand-icon">
-                           <img src="Source/company.png">
-                        </div>
-                        <div>
+                            <img src="Source/company.png">
                         </div>
                     </a>
-                    
-                    <p class="footer-tagline">
-                        Component Electronic Solutions
-                    </p>
+                    <p class="footer-tagline">Component Electronic Solutions</p>
                 </div>
                 
                 <div class="footer-links">
@@ -4262,18 +3449,6 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                         <li><a href="#products"><i class="fas fa-chevron-right"></i> Testing Services</a></li>
                         <li><a href="#products"><i class="fas fa-chevron-right"></i> Custom Solutions</a></li>
                     </ul>
-                </div>
-                
-                <div style="opacity:0;display: none;" class="footer-links">
-                    <h4>Newsletter</h4>
-                    <p>Subscribe for technical updates and industry insights</p>
-                    
-                    <div class="newsletter-form">
-                        <input type="email" class="newsletter-input" placeholder="Your email address">
-                        <button type="submit" class="newsletter-btn">
-                            Subscribe
-                        </button>
-                    </div>
                 </div>
             </div>
             
@@ -4323,131 +3498,27 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
     </div>
 
     <script>
-        // Clean & Readable JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
         
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile Navigation Toggle
-            const mobileToggle = document.getElementById('mobileToggle');
-            const navLinks = document.getElementById('navLinks');
-            
-            mobileToggle.addEventListener('click', () => {
-                mobileToggle.classList.toggle('active');
-                navLinks.classList.toggle('active');
-            });
-            
-            // Close mobile menu when clicking links
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileToggle.classList.remove('active');
-                    navLinks.classList.remove('active');
-                });
-            });
-            
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        const headerOffset = 80;
-                        const elementPosition = targetElement.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                        
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: 'smooth'
-                        });
-                        
-                        // Update active nav link
-                        document.querySelectorAll('.nav-link').forEach(link => {
-                            link.classList.remove('active');
-                        });
-                        this.classList.add('active');
-                    }
-                });
-            });
-            
-            // Form submission
-
-            document.getElementById('rfqForm').addEventListener('submit', function(e) {
-        e.preventDefault(); // Stop the page from refreshing
-
-        const form = this;
-        const btn = document.getElementById('submitBtn');
+        // ============================================
+        // FORM SUBMISSION - SINGLE HANDLER
+        // ============================================
+        const form = document.getElementById('rfqForm');
+        const submitBtn = document.getElementById('submitBtn');
         const statusDiv = document.getElementById('formStatus');
 
-        // Visual feedback
-        btn.disabled = true;
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        statusDiv.style.display = "none";
-
-        const formData = new FormData(form);
-
-        // SENDING TO YOUR HOSTINGER DOMAIN
-
-   
-        fetch('https://4mcengineeringservices.com/includes/sender.php', {
-            method: 'POST',
-            body: formData,
-            // Mode 'cors' is required for cross-domain requests
-            mode: 'cors'
-        })
-        .then(response => {
-            if (!response.ok) throw new Error('Network error. Check CORS settings on the server.');
-            return response.text();
-        })
-        .then(data => {
-            // We expect the PHP to echo "success"
-            if (data.trim().includes("success")) {
-                statusDiv.style.display = "block";
-                statusDiv.style.backgroundColor = "#d4edda";
-                statusDiv.style.color = "#155724";
-                statusDiv.innerText = "Success! Your request has been sent to Magtech.";
-                form.reset();
-            } else {
-                // If PHP sends back anything else (like an error message)
-                throw new Error(data);
-            }
-        })
-        .catch(error => {
-            statusDiv.style.display = "block";
-            statusDiv.style.backgroundColor = "#f8d7da";
-            statusDiv.style.color = "#721c24";
-         //   statusDiv.innerText = "Error: " + error.message;
-            console.error('Submission Error:', error);
-        })
-        .finally(() => {
-            btn.disabled = false;
-            btn.innerHTML = '<i class="fas fa-paper-plane"></i> Submit Request';
-        });
-    });
-
-            document.getElementById('rfqForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Stop page refresh
-
-    const form = document.getElementById('rfqForm');
-            const submitBtn = document.getElementById('submitBtn');
-            const statusDiv = document.getElementById('formStatus');
-
-            if (!form) return;
-
+        if (form) {
             form.addEventListener('submit', function(e) {
-                e.preventDefault(); // Stop page refresh
+                e.preventDefault();
 
-                // Disable button and show loading
                 submitBtn.disabled = true;
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-                statusDiv.style.display = 'none';
-                statusDiv.className = '';
+                statusDiv.className = 'loading';
+                statusDiv.innerHTML = '⏳ Sending your request...';
+                statusDiv.style.display = 'block';
 
-                // Collect form data
                 const formData = new FormData(this);
 
-                // Send to PHP
                 fetch('https://4mcengineeringservices.com/includes/sender.php', {
                     method: 'POST',
                     body: formData
@@ -4462,549 +3533,590 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                     const cleanData = data.trim();
                     
                     if (cleanData === 'success') {
-                        // Success
                         statusDiv.className = 'success';
                         statusDiv.innerHTML = '✅ Your request has been sent successfully! Our sales team will contact you within 24 hours.';
-                        this.reset(); // Clear form
+                        this.reset();
                     } else {
-                        // Error from server
                         statusDiv.className = 'error';
                         statusDiv.innerHTML = '❌ ' + (cleanData || 'Something went wrong. Please try again.');
                     }
                 })
                 .catch(error => {
-                    // Network or other error
                     statusDiv.className = 'error';
                     statusDiv.innerHTML = '❌ An error occurred. Please try again or contact us directly at adminhazel@magtechelectronics.com';
                     console.error('Submission Error:', error);
                 })
                 .finally(() => {
-                    // Re-enable button
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Submit Request';
                 });
             });
-       /*const rfqForm = document.getElementById('rfqForm');
-            if (rfqForm) {
-                rfqForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    const submitBtn = this.querySelector('.btn-submit');
-                    const originalText = submitBtn.innerHTML;
-                    
-                    // Show loading state
-                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
-                    submitBtn.disabled = true;
-                    
-                    // Simulate form submission
-                    setTimeout(() => {
-                        // Show success message
-                        alert('Thank you! Your request has been submitted. Our team will contact you within 24 hours.');
-                        
-                        // Reset form
-                        this.reset();
-                        
-                        // Restore button
-                        submitBtn.innerHTML = originalText;
-                        submitBtn.disabled = false;
-                    }, 1500);
-                });
-            } */
-            
-            // Newsletter form
-            const newsletterForm = document.querySelector('.newsletter-form');
-            if (newsletterForm) {
-                newsletterForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    const button = this.querySelector('.newsletter-btn');
-                    const originalText = button.textContent;
-                    
-                    button.textContent = 'Subscribed!';
-                    button.style.background = '#28a745';
-                    
-                    setTimeout(() => {
-                        button.textContent = originalText;
-                        button.style.background = '';
-                        this.querySelector('.newsletter-input').value = '';
-                    }, 2000);
-                });
-            }
-            
-            // Update active nav link on scroll
-            window.addEventListener('scroll', () => {
-                const sections = document.querySelectorAll('section[id]');
-                const navLinks = document.querySelectorAll('.nav-link');
-                
-                let current = '';
-                
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    
-                    if (window.scrollY >= sectionTop - 150) {
-                        current = section.getAttribute('id');
-                    }
-                });
-                
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${current}`) {
-                        link.classList.add('active');
-                    }
-                });
+        }
+
+        // ============================================
+        // MOBILE NAVIGATION
+        // ============================================
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        if (mobileToggle && navLinks) {
+            mobileToggle.addEventListener('click', () => {
+                mobileToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
             });
             
-            // Map Modal Functionality
-            const mapModal = document.getElementById('mapModal');
-            const mapCloseBtn = document.getElementById('mapCloseBtn');
-            const lagunaLocation = document.getElementById('lagunaLocation');
-            
-            // Open map modal
-            if (lagunaLocation && mapModal) {
-                lagunaLocation.addEventListener('click', () => {
-                    mapModal.classList.add('active');
-                    document.body.classList.add('modal-open');
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
                 });
-            }
-            
-            // Close map modal
-            if (mapCloseBtn && mapModal) {
-                mapCloseBtn.addEventListener('click', () => {
-                    mapModal.classList.remove('active');
-                    document.body.classList.remove('modal-open');
-                });
-            }
-            
-            // Close modal when clicking outside
-            if (mapModal) {
-                mapModal.addEventListener('click', (e) => {
-                    if (e.target === mapModal) {
-                        mapModal.classList.remove('active');
-                        document.body.classList.remove('modal-open');
-                    }
-                });
-            }
-            
-            // Close modal with Escape key
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && mapModal.classList.contains('active')) {
+            });
+        }
+
+        // ============================================
+        // SMOOTH SCROLLING
+        // ============================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        // ============================================
+        // MAP MODAL
+        // ============================================
+        const mapModal = document.getElementById('mapModal');
+        const mapCloseBtn = document.getElementById('mapCloseBtn');
+        const lagunaLocation = document.getElementById('lagunaLocation');
+        
+        if (lagunaLocation && mapModal) {
+            lagunaLocation.addEventListener('click', () => {
+                mapModal.classList.add('active');
+                document.body.classList.add('modal-open');
+            });
+        }
+        
+        if (mapCloseBtn && mapModal) {
+            mapCloseBtn.addEventListener('click', () => {
+                mapModal.classList.remove('active');
+                document.body.classList.remove('modal-open');
+            });
+        }
+        
+        if (mapModal) {
+            mapModal.addEventListener('click', (e) => {
+                if (e.target === mapModal) {
                     mapModal.classList.remove('active');
                     document.body.classList.remove('modal-open');
                 }
             });
-            
-            // SERVICES CATALOG Slideshow
-            const serviceSlides = document.querySelectorAll('.slideshow-slide');
-            const serviceDots = document.querySelectorAll('.services-carousel .carousel-dot');
-            const servicesPrevBtn = document.getElementById('servicesPrevBtn');
-            const servicesNextBtn = document.getElementById('servicesNextBtn');
-            const servicesSlideshow = document.getElementById('servicesSlideshow');
-            
-            let currentServiceSlide = 0;
-            let isServiceTransitioning = false;
-            let serviceSlideInterval;
-            
-            function showServiceSlide(n) {
-                if (isServiceTransitioning) return;
-                
-                isServiceTransitioning = true;
-                
-                // Remove active class from current slide with exit animation
-                serviceSlides[currentServiceSlide].classList.add('exit');
-                
-                // Remove active class from current dot
-                serviceDots.forEach(dot => dot.classList.remove('active'));
-                
-                // Calculate new slide index
-                currentServiceSlide = (n + serviceSlides.length) % serviceSlides.length;
-                
-                // Add active class to new slide after short delay
-                setTimeout(() => {
-                    // Remove all active and exit classes
-                    serviceSlides.forEach(slide => {
-                        slide.classList.remove('active', 'exit');
-                    });
-                    
-                    // Add active to new slide
-                    serviceSlides[currentServiceSlide].classList.add('active');
-                    serviceDots[currentServiceSlide].classList.add('active');
-                    
-                    isServiceTransitioning = false;
-                }, 500);
+        }
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mapModal && mapModal.classList.contains('active')) {
+                mapModal.classList.remove('active');
+                document.body.classList.remove('modal-open');
             }
+        });
+
+        // ============================================
+        // SERVICES SLIDESHOW
+        // ============================================
+        const serviceSlides = document.querySelectorAll('.slideshow-slide');
+        const serviceDots = document.querySelectorAll('.services-carousel .carousel-dot');
+        const servicesPrevBtn = document.getElementById('servicesPrevBtn');
+        const servicesNextBtn = document.getElementById('servicesNextBtn');
+        const servicesSlideshow = document.getElementById('servicesSlideshow');
+        
+        let currentServiceSlide = 0;
+        let isServiceTransitioning = false;
+        let serviceSlideInterval;
+        
+        function showServiceSlide(n) {
+            if (isServiceTransitioning || !serviceSlides.length) return;
             
-            // Next slide with enhanced animation
-            if (servicesNextBtn) {
-                servicesNextBtn.addEventListener('click', () => {
-                    showServiceSlide(currentServiceSlide + 1);
-                    resetServiceAutoSlide();
-                });
-            }
+            isServiceTransitioning = true;
             
-            // Previous slide with enhanced animation
-            if (servicesPrevBtn) {
-                servicesPrevBtn.addEventListener('click', () => {
-                    showServiceSlide(currentServiceSlide - 1);
-                    resetServiceAutoSlide();
-                });
-            }
+            serviceSlides[currentServiceSlide].classList.add('exit');
+            serviceDots.forEach(dot => dot.classList.remove('active'));
             
-            // Dot navigation
-            serviceDots.forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    if (index !== currentServiceSlide) {
-                        showServiceSlide(index);
-                        resetServiceAutoSlide();
-                    }
+            currentServiceSlide = (n + serviceSlides.length) % serviceSlides.length;
+            
+            setTimeout(() => {
+                serviceSlides.forEach(slide => {
+                    slide.classList.remove('active', 'exit');
                 });
+                
+                serviceSlides[currentServiceSlide].classList.add('active');
+                serviceDots[currentServiceSlide].classList.add('active');
+                
+                isServiceTransitioning = false;
+            }, 500);
+        }
+        
+        if (servicesNextBtn) {
+            servicesNextBtn.addEventListener('click', () => {
+                showServiceSlide(currentServiceSlide + 1);
+                resetServiceAutoSlide();
             });
-            
-            // Auto-rotate services slideshow
-            function startServiceAutoSlide() {
-                serviceSlideInterval = setInterval(() => {
-                    if (!isServiceTransitioning) {
-                        showServiceSlide(currentServiceSlide + 1);
-                    }
-                }, 6000);
-            }
-            
-            function resetServiceAutoSlide() {
-                clearInterval(serviceSlideInterval);
-                startServiceAutoSlide();
-            }
-            
-            // Initialize auto slide
+        }
+        
+        if (servicesPrevBtn) {
+            servicesPrevBtn.addEventListener('click', () => {
+                showServiceSlide(currentServiceSlide - 1);
+                resetServiceAutoSlide();
+            });
+        }
+        
+        serviceDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                if (index !== currentServiceSlide) {
+                    showServiceSlide(index);
+                    resetServiceAutoSlide();
+                }
+            });
+        });
+        
+        function startServiceAutoSlide() {
+            if (serviceSlideInterval) clearInterval(serviceSlideInterval);
+            serviceSlideInterval = setInterval(() => {
+                if (!isServiceTransitioning) {
+                    showServiceSlide(currentServiceSlide + 1);
+                }
+            }, 6000);
+        }
+        
+        function resetServiceAutoSlide() {
+            clearInterval(serviceSlideInterval);
             startServiceAutoSlide();
-            
-            // PRODUCTS CATALOG Slideshow
-            const productSlides = document.querySelectorAll('.product-slideshow-slide');
-            const productDots = document.querySelectorAll('.products-carousel .carousel-dot');
-            const productsPrevBtn = document.getElementById('productsPrevBtn');
-            const productsNextBtn = document.getElementById('productsNextBtn');
-            const productsSlideshow = document.getElementById('productsSlideshow');
-            
-            let currentProductSlide = 0;
-            let isProductTransitioning = false;
-            let productSlideInterval;
-            
-            function showProductSlide(n) {
-                if (isProductTransitioning) return;
-                
-                isProductTransitioning = true;
-                
-                // Remove active class from current slide with exit animation
-                productSlides[currentProductSlide].classList.add('exit');
-                
-                // Remove active class from current dot
-                productDots.forEach(dot => dot.classList.remove('active'));
-                
-                // Calculate new slide index
-                currentProductSlide = (n + productSlides.length) % productSlides.length;
-                
-                // Add active class to new slide after short delay
-                setTimeout(() => {
-                    // Remove all active and exit classes
-                    productSlides.forEach(slide => {
-                        slide.classList.remove('active', 'exit');
-                    });
-                    
-                    // Add active to new slide
-                    productSlides[currentProductSlide].classList.add('active');
-                    productDots[currentProductSlide].classList.add('active');
-                    
-                    isProductTransitioning = false;
-                }, 500);
-            }
-            
-            // Next slide with enhanced animation
-            if (productsNextBtn) {
-                productsNextBtn.addEventListener('click', () => {
-                    showProductSlide(currentProductSlide + 1);
-                    resetProductAutoSlide();
-                });
-            }
-            
-            // Previous slide with enhanced animation
-            if (productsPrevBtn) {
-                productsPrevBtn.addEventListener('click', () => {
-                    showProductSlide(currentProductSlide - 1);
-                    resetProductAutoSlide();
-                });
-            }
-            
-            // Dot navigation
-            productDots.forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    if (index !== currentProductSlide) {
-                        showProductSlide(index);
-                        resetProductAutoSlide();
-                    }
-                });
+        }
+        
+        if (serviceSlides.length) startServiceAutoSlide();
+        
+        if (servicesSlideshow) {
+            servicesSlideshow.addEventListener('mouseenter', () => {
+                clearInterval(serviceSlideInterval);
             });
             
-            // Auto-rotate products slideshow
-            function startProductAutoSlide() {
-                productSlideInterval = setInterval(() => {
-                    if (!isProductTransitioning) {
-                        showProductSlide(currentProductSlide + 1);
-                    }
-                }, 6000);
-            }
+            servicesSlideshow.addEventListener('mouseleave', () => {
+                startServiceAutoSlide();
+            });
+        }
+
+        // ============================================
+        // PRODUCTS SLIDESHOW
+        // ============================================
+        const productSlides = document.querySelectorAll('.product-slideshow-slide');
+        const productDots = document.querySelectorAll('.products-carousel .carousel-dot');
+        const productsPrevBtn = document.getElementById('productsPrevBtn');
+        const productsNextBtn = document.getElementById('productsNextBtn');
+        const productsSlideshow = document.getElementById('productsSlideshow');
+        
+        let currentProductSlide = 0;
+        let isProductTransitioning = false;
+        let productSlideInterval;
+        
+        function showProductSlide(n) {
+            if (isProductTransitioning || !productSlides.length) return;
             
-            function resetProductAutoSlide() {
-                clearInterval(productSlideInterval);
-                startProductAutoSlide();
-            }
+            isProductTransitioning = true;
             
-            // Initialize auto slide
+            productSlides[currentProductSlide].classList.add('exit');
+            productDots.forEach(dot => dot.classList.remove('active'));
+            
+            currentProductSlide = (n + productSlides.length) % productSlides.length;
+            
+            setTimeout(() => {
+                productSlides.forEach(slide => {
+                    slide.classList.remove('active', 'exit');
+                });
+                
+                productSlides[currentProductSlide].classList.add('active');
+                productDots[currentProductSlide].classList.add('active');
+                
+                isProductTransitioning = false;
+            }, 500);
+        }
+        
+        if (productsNextBtn) {
+            productsNextBtn.addEventListener('click', () => {
+                showProductSlide(currentProductSlide + 1);
+                resetProductAutoSlide();
+            });
+        }
+        
+        if (productsPrevBtn) {
+            productsPrevBtn.addEventListener('click', () => {
+                showProductSlide(currentProductSlide - 1);
+                resetProductAutoSlide();
+            });
+        }
+        
+        productDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                if (index !== currentProductSlide) {
+                    showProductSlide(index);
+                    resetProductAutoSlide();
+                }
+            });
+        });
+        
+        function startProductAutoSlide() {
+            if (productSlideInterval) clearInterval(productSlideInterval);
+            productSlideInterval = setInterval(() => {
+                if (!isProductTransitioning) {
+                    showProductSlide(currentProductSlide + 1);
+                }
+            }, 6000);
+        }
+        
+        function resetProductAutoSlide() {
+            clearInterval(productSlideInterval);
             startProductAutoSlide();
-            
-            // Pause slideshows on hover
-            if (servicesSlideshow) {
-                servicesSlideshow.addEventListener('mouseenter', () => {
-                    clearInterval(serviceSlideInterval);
-                });
-                
-                servicesSlideshow.addEventListener('mouseleave', () => {
-                    startServiceAutoSlide();
-                });
-            }
-            
-            if (productsSlideshow) {
-                productsSlideshow.addEventListener('mouseenter', () => {
-                    clearInterval(productSlideInterval);
-                });
-                
-                productsSlideshow.addEventListener('mouseleave', () => {
-                    startProductAutoSlide();
-                });
-            }
-            
-            // Touch swipe support for mobile
-            let touchStartX = 0;
-            let touchEndX = 0;
-            
-            // Services carousel swipe
-            if (servicesSlideshow) {
-                servicesSlideshow.addEventListener('touchstart', (e) => {
-                    touchStartX = e.changedTouches[0].screenX;
-                });
-                
-                servicesSlideshow.addEventListener('touchend', (e) => {
-                    touchEndX = e.changedTouches[0].screenX;
-                    handleServicesSwipe();
-                });
-            }
-            
-            function handleServicesSwipe() {
-                const swipeThreshold = 50;
-                
-                if (touchEndX < touchStartX - swipeThreshold) {
-                    // Swipe left - next slide
-                    showServiceSlide(currentServiceSlide + 1);
-                    resetServiceAutoSlide();
-                }
-                
-                if (touchEndX > touchStartX + swipeThreshold) {
-                    // Swipe right - previous slide
-                    showServiceSlide(currentServiceSlide - 1);
-                    resetServiceAutoSlide();
-                }
-            }
-            
-            // Products carousel swipe
-            if (productsSlideshow) {
-                productsSlideshow.addEventListener('touchstart', (e) => {
-                    touchStartX = e.changedTouches[0].screenX;
-                });
-                
-                productsSlideshow.addEventListener('touchend', (e) => {
-                    touchEndX = e.changedTouches[0].screenX;
-                    handleProductsSwipe();
-                });
-            }
-            
-            function handleProductsSwipe() {
-                const swipeThreshold = 50;
-                
-                if (touchEndX < touchStartX - swipeThreshold) {
-                    // Swipe left - next slide
-                    showProductSlide(currentProductSlide + 1);
-                    resetProductAutoSlide();
-                }
-                
-                if (touchEndX > touchStartX + swipeThreshold) {
-                    // Swipe right - previous slide
-                    showProductSlide(currentProductSlide - 1);
-                    resetProductAutoSlide();
-                }
-            }
-            
-            // Keyboard navigation for both carousels
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowLeft') {
-                    if (servicesSlideshow && servicesSlideshow.offsetParent !== null) {
-                        showServiceSlide(currentServiceSlide - 1);
-                        resetServiceAutoSlide();
-                    } else if (productsSlideshow && productsSlideshow.offsetParent !== null) {
-                        showProductSlide(currentProductSlide - 1);
-                        resetProductAutoSlide();
-                    }
-                } else if (e.key === 'ArrowRight') {
-                    if (servicesSlideshow && servicesSlideshow.offsetParent !== null) {
-                        showServiceSlide(currentServiceSlide + 1);
-                        resetServiceAutoSlide();
-                    } else if (productsSlideshow && productsSlideshow.offsetParent !== null) {
-                        showProductSlide(currentProductSlide + 1);
-                        resetProductAutoSlide();
-                    }
-                }
+        }
+        
+        if (productSlides.length) startProductAutoSlide();
+        
+        if (productsSlideshow) {
+            productsSlideshow.addEventListener('mouseenter', () => {
+                clearInterval(productSlideInterval);
             });
             
-            // Enhanced Hero Section Animations
+            productsSlideshow.addEventListener('mouseleave', () => {
+                startProductAutoSlide();
+            });
+        }
+
+        // ============================================
+        // INNER SLIDESHOWS
+        // ============================================
+        const slideData = [
+            { src: 'Source/inductor.png', label: '' },
+            { src: 'Source/p2.jpg', label: '' },
+            { src: 'Source/p3.jpg', label: '' }
+        ];
+
+        let currentIndex = 0;
+        let DAcurrentIndex = 0;
+        let PScurrentIndex = 0;
+
+        const wrapper = document.getElementById('slides-wrapper');
+        const dotsNav = document.getElementById('dot-container');
+        const label = document.getElementById('slide-label');
+
+        const DAwrapper = document.getElementById('DA-wrapper');
+        const DAdotsNav = document.getElementById('DA-container');
+        const DAlabel = document.getElementById('DA-label');
+
+        const PSwrapper = document.getElementById('PS-wrapper');
+        const PScdotsNav = document.getElementById('PS-container');
+        const PSlabel = document.getElementById('PS-label');
+
+        const DAslideData = [
+            { src: 'Source/da1.jpg', label: '' },
+            { src: 'Source/da2.png', label: '' },
+            { src: 'Source/da3.jpg', label: '' },
+            { src: 'Source/automation.png', label: '' }
+        ];
+
+        const PSslideData = [
+            { src: 'Source/ps1.png', label: '' },
+            { src: 'Source/psv1.jpg', label: '' },
+            { src: 'Source/psv2.jpg', label: '' },
+            { src: 'Source/psv4.jpg', label: '' },
+            { src: 'Source/psv5.jpg', label: '' }
+        ];
+
+        PSslideData.forEach((item, idx) => {
+            const img = document.createElement('img');
+            img.src = item.src;
+            img.className = 'slide';
+            PSwrapper.appendChild(img);
+            const dot = document.createElement('div');
+            dot.className = 'dot';
+            dot.addEventListener('click', () => goToPSSlide(idx));
+            PScdotsNav.appendChild(dot);
+        });
+
+        DAslideData.forEach((item, idx) => {
+            const img = document.createElement('img');
+            img.src = item.src;
+            img.className = 'slide';
+            DAwrapper.appendChild(img);
+            const dot = document.createElement('div');
+            dot.className = 'dot';
+            dot.addEventListener('click', () => goToDASlide(idx));
+            DAdotsNav.appendChild(dot);
+        });
+
+        slideData.forEach((item, idx) => {
+            const img = document.createElement('img');
+            img.src = item.src;
+            img.className = 'slide';
+            wrapper.appendChild(img);
+            const dot = document.createElement('div');
+            dot.className = 'dot';
+            dot.addEventListener('click', () => goToSlide(idx));
+            dotsNav.appendChild(dot);
+        });
+
+        function updateDisplay() {
+            wrapper.style.transform = `translateX(${-currentIndex * 100}%)`;
+            label.innerText = slideData[currentIndex].label;
+            const allDots = document.querySelectorAll('#dot-container .dot');
+            allDots.forEach((d, i) => {
+                d.classList.toggle('active-dot', i === currentIndex);
+            });
+        }
+
+        function updateDADisplay() {
+            DAwrapper.style.transform = `translateX(${-DAcurrentIndex * 100}%)`;
+            DAlabel.innerText = DAslideData[DAcurrentIndex].label;
+            const DAallDots = document.querySelectorAll('#DA-container .dot');
+            DAallDots.forEach((d, i) => {
+                d.classList.toggle('active-dot', i === DAcurrentIndex);
+            });
+        }
+
+        function updatePSDisplay() {
+            PSwrapper.style.transform = `translateX(${-PScurrentIndex * 100}%)`;
+            PSlabel.innerText = PSslideData[PScurrentIndex].label;
+            const PSallDots = document.querySelectorAll('#PS-container .dot');
+            PSallDots.forEach((d, i) => {
+                d.classList.toggle('active-dot', i === PScurrentIndex);
+            });
+        }
+
+        function goToPSSlide(idx) {
+            PScurrentIndex = idx;
+            updatePSDisplay();
+            resetPSAutoSlide();
+        }
+
+        function goToSlide(idx) {
+            currentIndex = idx;
+            updateDisplay();
+            resetAutoSlide();
+        }
+
+        function goToDASlide(idx) {
+            DAcurrentIndex = idx;
+            updateDADisplay();
+            resetDAAutoSlide();
+        }
+
+        function nextPSSlide() {
+            PScurrentIndex = (PScurrentIndex + 1) % PSslideData.length;
+            updatePSDisplay();
+            resetPSAutoSlide();
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slideData.length;
+            updateDisplay();
+            resetAutoSlide();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slideData.length) % slideData.length;
+            updateDisplay();
+            resetAutoSlide();
+        }
+
+        function prevPSSlide() {
+            PScurrentIndex = (PScurrentIndex - 1 + PSslideData.length) % PSslideData.length;
+            updatePSDisplay();
+            resetPSAutoSlide();
+        }
+
+        function nextDASlide() {
+            DAcurrentIndex = (DAcurrentIndex + 1) % DAslideData.length;
+            updateDADisplay();
+            resetDAAutoSlide();
+        }
+
+        function prevDASlide() {
+            DAcurrentIndex = (DAcurrentIndex - 1 + DAslideData.length) % DAslideData.length;
+            updateDADisplay();
+            resetDAAutoSlide();
+        }
+
+        let autoSlideInterval;
+        let DAautoSlideInterval;
+        let PSautoSlideInterval;
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                nextSlide();
+            }, 4000);
+        }
+
+        function startDAAutoSlide() {
+            DAautoSlideInterval = setInterval(() => {
+                nextDASlide();
+            }, 4000);
+        }
+
+        function startPSAutoSlide() {
+            PSautoSlideInterval = setInterval(() => {
+                nextPSSlide();
+            }, 4000);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+
+        function resetDAAutoSlide() {
+            clearInterval(DAautoSlideInterval);
+            startDAAutoSlide();
+        }
+
+        function resetPSAutoSlide() {
+            clearInterval(PSautoSlideInterval);
+            startPSAutoSlide();
+        }
+
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        wrapper.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        wrapper.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchEndX < touchStartX - 50) nextSlide();
+            if (touchEndX > touchStartX + 50) prevSlide();
+        });
+
+        DAwrapper.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        DAwrapper.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchEndX < touchStartX - 50) nextDASlide();
+            if (touchEndX > touchStartX + 50) prevDASlide();
+        });
+
+        PSwrapper.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        PSwrapper.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchEndX < touchStartX - 50) nextPSSlide();
+            if (touchEndX > touchStartX + 50) prevPSSlide();
+        });
+
+        updateDisplay();
+        updateDADisplay();
+        updatePSDisplay();
+        startAutoSlide();
+        startDAAutoSlide();
+        startPSAutoSlide();
+
+        // ============================================
+        // HERO ANIMATIONS
+        // ============================================
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
             
-            // Create floating particles
-            function createParticles() {
-                const particlesContainer = document.getElementById('particles');
-                if (!particlesContainer) return;
+            const particleCount = 50;
+            const colors = ['#00A859', '#8f9396', '#b30000', '#d1d3d4'];
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
                 
-                const particleCount = 50;
-                const colors = ['#00A859', '#8f9396', '#b30000', '#d1d3d4'];
+                const size = Math.random() * 4 + 2;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                const duration = Math.random() * 20 + 10;
+                const delay = Math.random() * 5;
                 
-                for (let i = 0; i < particleCount; i++) {
-                    const particle = document.createElement('div');
-                    particle.classList.add('particle');
-                    
-                    // Random properties
-                    const size = Math.random() * 4 + 2;
-                    const color = colors[Math.floor(Math.random() * colors.length)];
-                    const posX = Math.random() * 100;
-                    const posY = Math.random() * 100;
-                    const duration = Math.random() * 20 + 10;
-                    const delay = Math.random() * 5;
-                    
-                    // Apply styles
-                    particle.style.width = `${size}px`;
-                    particle.style.height = `${size}px`;
-                    particle.style.background = color;
-                    particle.style.top = `${posY}%`;
-                    particle.style.left = `${posX}%`;
-                    particle.style.animationDuration = `${duration}s`;
-                    particle.style.animationDelay = `${delay}s`;
-                    
-                    particlesContainer.appendChild(particle);
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    background: ${color};
+                    top: ${posY}%;
+                    left: ${posX}%;
+                    animation-duration: ${duration}s;
+                    animation-delay: ${delay}s;
+                `;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        createParticles();
+        
+        const typewriter = document.querySelector('.typewriter');
+        if (typewriter) {
+            const text = typewriter.textContent;
+            typewriter.textContent = '';
+            let index = 0;
+            
+            function typeCharacter() {
+                if (index < text.length) {
+                    typewriter.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(typeCharacter, 50);
                 }
             }
             
-            // Create data flow lines
-            function createDataFlows() {
-                const dataFlow = document.querySelector('.data-flow');
-                if (!dataFlow) return;
-                
-                for (let i = 0; i < 5; i++) {
-                    const line = document.createElement('div');
-                    line.classList.add('flow-line');
-                    
-                    // Random properties
-                    const top = Math.random() * 80 + 10;
-                    const width = Math.random() * 40 + 20;
-                    const delay = Math.random() * 3;
-                    const duration = Math.random() * 2 + 3;
-                    
-                    // Apply styles
-                    line.style.top = `${top}%`;
-                    line.style.width = `${width}%`;
-                    line.style.animationDelay = `${delay}s`;
-                    line.style.animationDuration = `${duration}s`;
-                    
-                    dataFlow.appendChild(line);
-                }
-            }
-            
-            // Create glowing nodes
-            function createNodes() {
-                const glowingNodes = document.querySelector('.glowing-nodes');
-                if (!glowingNodes) return;
-                
-                const nodeCount = 15;
-                for (let i = 0; i < nodeCount; i++) {
-                    const node = document.createElement('div');
-                    node.classList.add('node');
-                    
-                    // Random properties
-                    const top = Math.random() * 90 + 5;
-                    const left = Math.random() * 90 + 5;
-                    const delay = Math.random() * 2;
-                    
-                    // Apply styles
-                    node.style.top = `${top}%`;
-                    node.style.left = `${left}%`;
-                    node.style.animationDelay = `${delay}s`;
-                    
-                    glowingNodes.appendChild(node);
-                }
-            }
-            
-            // Number counting animation
-            function animateStats() {
-                const statNumbers = document.querySelectorAll('.stat-number');
-                
-                statNumbers.forEach(stat => {
-                    const target = parseInt(stat.getAttribute('data-count'));
-                    const suffix = stat.textContent.includes('/') ? '/7' : '';
-                    let current = 0;
-                    const increment = target / 50;
-                    
-                    const updateCount = () => {
-                        if (current < target) {
-                            current += increment;
-                            if (current > target) current = target;
-                            
-                            if (target === 100) {
-                                stat.textContent = Math.floor(current) + '%';
-                            } else {
-                                stat.textContent = suffix ? 
-                                    Math.floor(current) + suffix : 
-                                    Math.floor(current);
-                            }
-                            
-                            setTimeout(updateCount, 30);
-                        }
-                    };
-                    
-                    // Start animation when in viewport
-                    const observer = new IntersectionObserver((entries) => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                updateCount();
-                                observer.unobserve(entry.target);
-                            }
-                        });
-                    }, { threshold: 0.5 });
-                    
-                    observer.observe(stat);
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(typeCharacter, 500);
+                        observer.unobserve(entry.target);
+                    }
                 });
-            }
+            }, { threshold: 0.5 });
             
-            // Custom cursor
-            function initCustomCursor() {
-                const cursorDot = document.querySelector('.cursor-dot');
-                const cursorRing = document.querySelector('.cursor-ring');
-                
-                if (!cursorDot || !cursorRing) return;
-                
+            observer.observe(typewriter);
+        }
+
+        // ============================================
+        // CUSTOM CURSOR
+        // ============================================
+        if (window.innerWidth >= 1024) {
+            const cursorDot = document.querySelector('.cursor-dot');
+            const cursorRing = document.querySelector('.cursor-ring');
+            
+            if (cursorDot && cursorRing) {
                 document.addEventListener('mousemove', (e) => {
-                    cursorDot.style.left = `${e.clientX}px`;
-                    cursorDot.style.top = `${e.clientY}px`;
-                    
-                    cursorRing.style.left = `${e.clientX}px`;
-                    cursorRing.style.top = `${e.clientY}px`;
+                    cursorDot.style.left = e.clientX + 'px';
+                    cursorDot.style.top = e.clientY + 'px';
+                    cursorRing.style.left = e.clientX + 'px';
+                    cursorRing.style.top = e.clientY + 'px';
                 });
                 
-                // Add hover effects
-                const interactiveElements = document.querySelectorAll('a, button, .visual-item, .nav-link, .carousel-btn, .carousel-dot');
-                
-                interactiveElements.forEach(el => {
+                document.querySelectorAll('a, button, .visual-item, .nav-link, .carousel-btn, .carousel-dot').forEach(el => {
                     el.addEventListener('mouseenter', () => {
                         cursorDot.style.transform = 'scale(2)';
                         cursorRing.style.transform = 'scale(1.5)';
@@ -5018,297 +4130,33 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
                     });
                 });
             }
+        }
+
+        // ============================================
+        // ACTIVE NAV LINK ON SCROLL
+        // ============================================
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
             
-            // Typewriter effect
-            function initTypewriter() {
-                const typewriter = document.querySelector('.typewriter');
-                if (!typewriter) return;
-                
-                const text = typewriter.textContent;
-                typewriter.textContent = '';
-                let index = 0;
-                
-                function typeCharacter() {
-                    if (index < text.length) {
-                        typewriter.textContent += text.charAt(index);
-                        index++;
-                        setTimeout(typeCharacter, 50);
-                    }
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= sectionTop - 150) {
+                    current = section.getAttribute('id');
                 }
-                
-                // Start typing when in view
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            setTimeout(typeCharacter, 500);
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.5 });
-                
-                observer.observe(typewriter);
-            }
-            // Initialize all animations
-            createParticles();
-            createDataFlows();
-            createNodes();
-            animateStats();
-            initCustomCursor();
-            initTypewriter();
-
-            // Add parallax effect to particles
-            window.addEventListener('mousemove', (e) => {
-                const particles = document.querySelectorAll('.particle');
-                const mouseX = e.clientX / window.innerWidth;
-                const mouseY = e.clientY / window.innerHeight;
-                
-                particles.forEach((particle, index) => {
-                    const speed = 0.5 + (index % 3) * 0.2;
-                    const x = (mouseX - 0.5) * speed * 100;
-                    const y = (mouseY - 0.5) * speed * 100;
-                    
-                    particle.style.transform = `translate(${x}px, ${y}px)`;
-                });
             });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
             });
+        });
 
-            const slideData = [
-                { src: 'Source/inductor.png', label: '' },
-                { src: 'Source/p2.jpg', label: '' },
-                { src: 'Source/p3.jpg', label: '' }
-            ];
-
-            let currentIndex = 0;
-            let DAcurrentIndex = 0;
-            let PScurrentIndex = 0;
-
-            const wrapper = document.getElementById('slides-wrapper');
-            const dotsNav = document.getElementById('dot-container');
-            const label = document.getElementById('slide-label');
-
-            const DAwrapper = document.getElementById('DA-wrapper');
-            const DAdotsNav = document.getElementById('DA-container');
-            const DAlabel = document.getElementById('DA-label');
-
-            const PSwrapper = document.getElementById('PS-wrapper');
-            const PScdotsNav = document.getElementById('PS-container');
-            const PSlabel = document.getElementById('PS-label');
-
-            // Slide data for digital automation
-            const DAslideData = [
-                { src: 'Source/da1.jpg', label: '' },
-                { src: 'Source/da2.png', label: '' },
-                { src: 'Source/da3.jpg', label: '' },
-                { src: 'Source/automation.png', label: '' }
-            ];
-
-            const PSslideData = [
-                { src: 'Source/ps1.png', label: '' },
-                { src: 'Source/psv1.jpg', label: '' },
-                { src: 'Source/psv2.jpg', label: '' },
-                { src: 'Source/psv4.jpg', label: '' },
-                { src: 'Source/psv5.jpg', label: '' }
-            ];
-
-            PSslideData.forEach((item, idx) => {
-                const img = document.createElement('img');
-                img.src = item.src;
-                img.className = 'slide';
-                PSwrapper.appendChild(img);
-                const dot = document.createElement('div');
-                dot.className = 'dot';
-                dot.addEventListener('click', () => goToPSSlide(idx));
-                PScdotsNav.appendChild(dot);
-            });
-
-            // Create slides and dots for digital automation
-            DAslideData.forEach((item, idx) => {
-                const img = document.createElement('img');
-                img.src = item.src;
-                img.className = 'slide';
-                DAwrapper.appendChild(img);
-
-                const dot = document.createElement('div');
-                dot.className = 'dot';
-                dot.addEventListener('click', () => goToDASlide(idx));
-                DAdotsNav.appendChild(dot);
-            });
-
-            // Create slides and dots for main carousel
-            slideData.forEach((item, idx) => {
-                const img = document.createElement('img');
-                img.src = item.src;
-                img.className = 'slide';
-                wrapper.appendChild(img);
-
-                const dot = document.createElement('div');
-                dot.className = 'dot';
-                dot.addEventListener('click', () => goToSlide(idx));
-                dotsNav.appendChild(dot);
-            });
-
-            function updateDisplay() {
-                wrapper.style.transform = `translateX(${-currentIndex * 100}%)`;
-                label.innerText = slideData[currentIndex].label;
-                
-                const allDots = document.querySelectorAll('#dot-container .dot');
-                allDots.forEach((d, i) => {
-                    d.classList.toggle('active-dot', i === currentIndex);
-                });
-            }
-
-            function updateDADisplay() {
-                DAwrapper.style.transform = `translateX(${-DAcurrentIndex * 100}%)`;
-                DAlabel.innerText = DAslideData[DAcurrentIndex].label;
-                
-                const DAallDots = document.querySelectorAll('#DA-container .dot');
-                DAallDots.forEach((d, i) => {
-                    d.classList.toggle('active-dot', i === DAcurrentIndex);
-                });
-            }
-
-            function updatePSDisplay() {
-                PSwrapper.style.transform = `translateX(${-PScurrentIndex * 100}%)`;
-                PSlabel.innerText = PSslideData[PScurrentIndex].label;
-                
-                const PSallDots = document.querySelectorAll('#PS-container .dot');
-                PSallDots.forEach((d, i) => {
-                    d.classList.toggle('active-dot', i === PScurrentIndex);
-                });
-            }
-
-            function goToPSSlide(idx) {
-                PScurrentIndex = idx;
-                updatePSDisplay();
-                resetPSAutoSlide();
-            }
-
-            function goToSlide(idx) {
-                currentIndex = idx;
-                updateDisplay();
-                resetAutoSlide();
-            }
-
-            function goToDASlide(idx) {
-                DAcurrentIndex = idx;
-                updateDADisplay();
-                resetDAAutoSlide();
-            }
-
-            function nextPSSlide() {
-                PScurrentIndex = (PScurrentIndex + 1) % PSslideData.length;
-                updatePSDisplay();
-                resetPSAutoSlide();
-            }
-
-            function nextSlide() {
-                currentIndex = (currentIndex + 1) % slideData.length;
-                updateDisplay();
-                resetAutoSlide();
-            }
-
-            function prevSlide() {
-                currentIndex = (currentIndex - 1 + slideData.length) % slideData.length;
-                updateDisplay();
-                resetAutoSlide();
-            }
-
-            function prevPSSlide() {
-                PScurrentIndex = (PScurrentIndex - 1 + PSslideData.length) % PSslideData.length;
-                updatePSDisplay();
-                resetPSAutoSlide();
-            }
-
-            function nextDASlide() {
-                DAcurrentIndex = (DAcurrentIndex + 1) % DAslideData.length;
-                updateDADisplay();
-                resetDAAutoSlide();
-            }
-
-            function prevDASlide() {
-                DAcurrentIndex = (DAcurrentIndex - 1 + DAslideData.length) % DAslideData.length;
-                updateDADisplay();
-                resetDAAutoSlide();
-            }
-
-            let autoSlideInterval;
-            let DAautoSlideInterval;
-            let PSautoSlideInterval;
-
-            function startAutoSlide() {
-                autoSlideInterval = setInterval(() => {
-                    nextSlide();
-                }, 4000);
-            }
-
-            function startDAAutoSlide() {
-                DAautoSlideInterval = setInterval(() => {
-                    nextDASlide();
-                }, 4000);
-            }
-
-            function startPSAutoSlide() {
-                PSautoSlideInterval = setInterval(() => {
-                    nextPSSlide();
-                }, 4000);
-            }
-
-            function resetAutoSlide() {
-                clearInterval(autoSlideInterval);
-                startAutoSlide();
-            }
-
-            function resetDAAutoSlide() {
-                clearInterval(DAautoSlideInterval);
-                startDAAutoSlide();
-            }
-
-            function resetPSAutoSlide() {
-                clearInterval(PSautoSlideInterval);
-                startPSAutoSlide();
-            }
-
-            // Touch swipe support
-            let touchStartX = 0;
-            let touchEndX = 0;
-
-            wrapper.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
-            });
-
-            wrapper.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].screenX;
-                if (touchEndX < touchStartX - 50) nextSlide();
-                if (touchEndX > touchStartX + 50) prevSlide();
-            });
-
-            DAwrapper.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
-            });
-
-            DAwrapper.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].screenX;
-                if (touchEndX < touchStartX - 50) nextDASlide();
-                if (touchEndX > touchStartX + 50) prevDASlide();
-            });
-
-            PSwrapper.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
-            });
-
-            PSwrapper.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].screenX;
-                if (touchEndX < touchStartX - 50) nextPSSlide();
-                if (touchEndX > touchStartX + 50) prevPSSlide();
-            });
-
-            // Initialize
-            updateDisplay();
-            updateDADisplay();
-            updatePSDisplay();
-            startAutoSlide();
-            startDAAutoSlide();
-            startPSAutoSlide();
+    });
     </script>
 </body>
 </html>
