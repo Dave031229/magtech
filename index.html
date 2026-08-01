@@ -4429,35 +4429,62 @@ The company operates two strategic manufacturing sites—Laguna, Philippines and
             document.getElementById('rfqForm').addEventListener('submit', function(e) {
     e.preventDefault(); // Stop page refresh
 
-    const formData = new URLSearchParams(new FormData(this)).toString();
-    const submitBtn = document.getElementById('submitBtn');
-    
-    submitBtn.innerText = "Sending...";
-    submitBtn.disabled = true;
+    const form = document.getElementById('rfqForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const statusDiv = document.getElementById('formStatus');
 
-    // Send data to your PHP script
-    fetch('https://4mcengineeringservices.com/includes/sender.php?' + formData, {
-        method: 'GET'
-    })
-    .then(response => response.text())
-    .then(data => {
-        if (data.trim() === "success") {
-            alert("Request sent successfully!");
-            this.reset(); // Clear form
-        } else {
-           // alert("Submission failed: " + data);
-        }
-    })
-    .catch(error => {
-  //      console.error('Error:', error);
-        alert("An error occurred. Please try again.");
-    })
-    .finally(() => {
-        submitBtn.innerText = "Submit Request";
-        submitBtn.disabled = false;
-    });
-});
-          /*const rfqForm = document.getElementById('rfqForm');
+            if (!form) return;
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); // Stop page refresh
+
+                // Disable button and show loading
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                statusDiv.style.display = 'none';
+                statusDiv.className = '';
+
+                // Collect form data
+                const formData = new FormData(this);
+
+                // Send to PHP
+                fetch('https://4mcengineeringservices.com/includes/sender.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    const cleanData = data.trim();
+                    
+                    if (cleanData === 'success') {
+                        // Success
+                        statusDiv.className = 'success';
+                        statusDiv.innerHTML = '✅ Your request has been sent successfully! Our sales team will contact you within 24 hours.';
+                        this.reset(); // Clear form
+                    } else {
+                        // Error from server
+                        statusDiv.className = 'error';
+                        statusDiv.innerHTML = '❌ ' + (cleanData || 'Something went wrong. Please try again.');
+                    }
+                })
+                .catch(error => {
+                    // Network or other error
+                    statusDiv.className = 'error';
+                    statusDiv.innerHTML = '❌ An error occurred. Please try again or contact us directly at adminhazel@magtechelectronics.com';
+                    console.error('Submission Error:', error);
+                })
+                .finally(() => {
+                    // Re-enable button
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Submit Request';
+                });
+            });
+       /*const rfqForm = document.getElementById('rfqForm');
             if (rfqForm) {
                 rfqForm.addEventListener('submit', function(e) {
                     e.preventDefault();
